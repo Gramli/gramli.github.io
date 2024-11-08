@@ -11,4 +11,4 @@ Find commit you want in reflog and reset branche to that commit using:
 git reset <commitId> --hard
 ```
 
-Then do rebase with git bash, because sourceTree will fails again.
+Then do rebase with git bash, because sourceTree will fails again. Generaly for big rebase I recomend to use git bash.
