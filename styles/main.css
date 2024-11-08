@@ -1,12 +1,18 @@
-body {
-    padding-top: 4rem;
-  }
-  .blog-header {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  .post-preview {
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
-  }
+.top {
+  padding-top: 100px;
+}
+
+.blog-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.post-preview {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+img{
+  max-height: 350px;
+}
