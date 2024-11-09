@@ -10,7 +10,8 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -25,9 +26,20 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#posts">Main Topics</a>
+          <ul class="navbar-nav ms-auto me-5">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Topics
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#posts">C#</a></li>
+                <li><a class="dropdown-item" href="#posts">Benchmarks</a></li>
+                <li><a class="dropdown-item" href="#posts">Angular</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#posts1">Git</a></li>
+                <li><a class="dropdown-item" href="#posts1">Versioning</a></li>
+                <li><a class="dropdown-item" href="#posts1">Configuration</a></li>
+              </ul>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#about">About</a>
@@ -36,6 +48,10 @@
               <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" id="searchBar" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary" onclick="search()">Search</button>
+          </form>
         </div>
       </div>
     </nav>
@@ -46,16 +62,14 @@
           <div class="col text-start">
             <h1 class="display-4">Welcome</h1>
             <p class="lead">
-              Gramli's Blog is about sharing insights on C#, TypeScript,
-              Angular, .NET, Git, and more. Posts are simple and short .md files
-              that describe how to solve specific problems.
+              This blog is a space to capture and share insights on C#, TypeScript, Angular, .NET, Git, and more. 
+              Posts are straightforward, concise Markdown files that focus on solving specific problems.
             </p>
           </div>
           <div class="col text-center">
             <img
-              src="assets/banner.webp"
+              src="assets/banner1.webp"
               alt="Programming blog banner"
-              style="max-height: 350px;"
             />
           </div>
         </div>
@@ -66,38 +80,92 @@
       <hr style="width:100%;text-align:left;margin-left:0">
       <section id="posts">
         <div class="row">
-          <h2 class="my-4">Main Topics</h2>
+          <h2 class="my-4">Topics</h2>
           <div class="col">
+            <h4>C#</h4>
             <ul>
               <li>
-                <h5><a href="#">Benchmarks</a></h5>
-                <p class="text-muted">Posted on November 8, 2024</p>
-              </li>
-              <li>
-                <h5><a href="#">Git</a></h5>
-                <p class="text-muted">Posted on November 8, 2024</p>
-              </li>
-              <li>
-                <h5><a href="#">Projects</a></h5>
-                <p class="text-muted">Posted on November 8, 2024</p>
-              </li>
-              <li>
-                <h5><a href="#">C#</a></h5>
+                <h6><a href="https://gramli.github.io/posts/code/csharp/remove-diacritics" class="link-primary">Remove Diacritics</a></h6>
                 <p class="text-muted">Posted on November 8, 2024</p>
               </li>
             </ul>
           </div>
-          <div class="col"></div>
+          <div class="col">
+            <h4>Benchmarks</h4>
+            <ul>
+              <li>
+                <h6><a href="https://gramli.github.io/posts/benchmarks/exceptions-vs-result" class="link-primary">Exception vs Result pattern</a></h6>
+                <p class="text-muted">Posted on November 8, 2024</p>
+              </li>
+              <li>
+                <h5>Reflection</h5>
+                <ul>
+                  <li>
+                    <h6><a href="https://gramli.github.io/posts/reflection/get-enum-value-attribute" class="link-primary">Get Enum Value Attribute</a></h6>
+                    <p class="text-muted">Posted on November 8, 2024</p>
+                  </li>
+                  <li>
+                    <h6><a href="https://gramli.github.io/posts/benchmarks/reflection/export-data" class="link-primary">Export data</a></h6>
+                    <p class="text-muted">Posted on November 8, 2024</p>
+                  </li>
+                  <li>
+                    <h6><a href="https://gramli.github.io/posts/benchmarks/reflection/create-instance" class="link-primary">Create Instance</a></h6>
+                    <p class="text-muted">Posted on November 8, 2024</p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <h4>Angular</h4>
+          </div>
+        </div>
+      </section>
+
+      <section id="posts1" class="mt-4">
+        <div class="row">
+          <div class="col">
+            <h4>Git</h4>
+            <ul>
+              <li>
+                <h6><a href="https://gramli.github.io//posts/git/troubleshooting/commit-to-master" class="link-primary">Commit to master</a></h6>
+                <p class="text-muted">Posted on November 8, 2024</p>
+              </li>
+              <li>
+                <h6><a href="https://gramli.github.io//posts/git/troubleshooting/sourcetree-missing-last-commit" class="link-primary">SourceTree rebase failed, missing last commit</a></h6>
+                <p class="text-muted">Posted on November 8, 2024</p>
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <h4>Versioning</h4>
+            <ul>
+              <li>
+                <h6><a href="#" class="link-primary">Package json Versioning</a></h6>
+                <p class="text-muted">Posted on November 8, 2024</p>
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <h4>Configuration</h4>
+            <ul>
+              <li>
+                <h6><a href="#" class="link-primary">Visible internals from different project</a></h6>
+                <p class="text-muted">Posted on November 8, 2024</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
       <hr style="width:100%;text-align:left;margin-left:0">
       <section id="about" class="mt-5">
         <h2>About Me</h2>
-        <p>
-          I am a passionate programmer who loves exploring C#, Angular, and the
-          broader tech ecosystem. This blog is my space to share experiences,
-          tips, and lessons learned.
+        <p class="lead">
+          I'm a Senior Full-Stack Developer specializing in C# and building applications with the .NET and .NET Core frameworks. 
+          I began my career as a frontend developer working with Windows desktop applications, but in recent years, I've focused on web development, 
+          primarily with Angular and React. I’m a software craftsman and enthusiast who values staying up-to-date with new trends and best practices, 
+          aiming for high code quality and optimal test coverage. This blog is my space to share experiences, tips, and lessons learned along the way.
         </p>
       </section>
 
@@ -106,7 +174,7 @@
         <h2>Contact</h2>
         <p>
           Feel free to reach out via
-          <a href="https://github.com/your-username">GitHub</a>.
+          <a href="https://github.com/Gramli">GitHub</a>.
         </p>
       </section>
       <hr style="width:100%;text-align:left;margin-left:0">
@@ -117,5 +185,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/main.js"></script>
   </body>
 </html>
