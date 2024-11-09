@@ -32,7 +32,7 @@ To be able to compare with some fast solution I create static Dictionary -> Map 
     }
 ```
 
-![Measure One - Get Enum Attribute](./doc/img/getEnumAttribute.png)
+![Measure One - Get Enum Attribute](../assets/getEnumAttribute.png)
 
 #### Summary
 Comparatively, the implementation with Dictionary shows significantly faster performance and avoids memory allocation when retrieving values by key. However, it requires manual editing every time a new item is added to the Enum.
