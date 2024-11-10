@@ -18,7 +18,8 @@
     {% if site.title and site.title != page.title %}
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-          <a class="navbar-brand" href="{{ "/" | absolute_url }}">Gramli's Blog</a>
+          <a href="{{ "/" | absolute_url }}"><img src="{{ "/assets/avatars.ico" | relative_url }}" class="icon" alt="Blog Icon"></a>
+          <a class="navbar-brand mt-1 ms-2" href="{{ "/" | absolute_url }}">Gramli's Blog</a>
           <button
             class="navbar-toggler"
             type="button"
