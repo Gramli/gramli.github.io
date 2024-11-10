@@ -37,10 +37,8 @@
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="#posts">C#</a></li>
                 <li><a class="dropdown-item" href="#posts">Benchmarks</a></li>
-                <li><a class="dropdown-item" href="#posts">Angular</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#posts1">Git</a></li>
-                <li><a class="dropdown-item" href="#posts1">Versioning</a></li>
                 <li><a class="dropdown-item" href="#posts1">Configuration</a></li>
               </ul>
             </li>
@@ -52,7 +50,7 @@
             </li>
           </ul>
           <form class="d-flex">
-            <input class="form-control me-2" type="search" id="searchBar" placeholder="Search" aria-label="Search">
+            <input class="form-control me-2" type="search" id="searchBar" placeholder="Search on page" aria-label="Search">
             <button class="btn btn-outline-primary" type="button" onclick="search()">Search</button>
           </form>
         </div>
@@ -65,8 +63,9 @@
           <div class="col text-start">
             <h1 class="display-4">Welcome</h1>
             <p class="lead">
-              This blog is a space to capture and share insights on C#, TypeScript, Angular, .NET, Git, and more. 
-              Posts are straightforward, concise Markdown files that focus on solving specific problems.
+              This blog is a space to capture and share insights from my daily programming tasks. 
+              Posts are straightforward, concise Markdown files focused on solving specific, small problems. 
+              Whether it’s troubleshooting code or exploring best practices, each entry aims to provide clear, practical solutions.
             </p>
           </div>
           <div class="col text-center">
@@ -89,7 +88,11 @@
             <ul>
               <li>
                 <h6><a href="https://gramli.github.io/posts/code/csharp/remove-diacritics" class="link-primary">Remove Diacritics</a></h6>
-                <p class="text-muted">Posted on November 8, 2024</p>
+                <p class="text-muted">Extension method to remove diacritics using ISO-8859-8.</p>
+              </li>
+              <li>
+                <h6><a href="https://gramli.github.io/posts/code/csharp/czech-encodings" class="link-primary">Czech encoding in .NET</a></h6>
+                <p class="text-muted">How to add czech encoding into .NET project.</p>
               </li>
             </ul>
           </div>
@@ -98,29 +101,28 @@
             <ul>
               <li>
                 <h6><a href="https://gramli.github.io/posts/benchmarks/exceptions-vs-result" class="link-primary">Exception vs Result pattern</a></h6>
-                <p class="text-muted">Posted on November 8, 2024</p>
+                <p class="text-muted">Benchmark about two error handling approaches.</p>
               </li>
               <li>
                 <h5>Reflection</h5>
                 <ul>
                   <li>
                     <h6><a href="https://gramli.github.io/posts/reflection/get-enum-value-attribute" class="link-primary">Get Enum Value Attribute</a></h6>
-                    <p class="text-muted">Posted on November 8, 2024</p>
+                    <p class="text-muted">Benchmark about getting enum value attribute using reflection.</p>
                   </li>
                   <li>
                     <h6><a href="https://gramli.github.io/posts/benchmarks/reflection/export-data" class="link-primary">Export data</a></h6>
-                    <p class="text-muted">Posted on November 8, 2024</p>
+                    <p class="text-muted">Export data using reflection.</p>
                   </li>
                   <li>
                     <h6><a href="https://gramli.github.io/posts/benchmarks/reflection/create-instance" class="link-primary">Create Instance</a></h6>
-                    <p class="text-muted">Posted on November 8, 2024</p>
+                    <p class="text-muted">Create instance using reflection.</p>
                   </li>
                 </ul>
               </li>
             </ul>
           </div>
           <div class="col">
-            <h4>Angular</h4>
           </div>
         </div>
       </section>
@@ -132,20 +134,19 @@
             <ul>
               <li>
                 <h6><a href="https://gramli.github.io//posts/git/troubleshooting/commit-to-master" class="link-primary">Commit to master</a></h6>
-                <p class="text-muted">Posted on November 8, 2024</p>
+                <p class="text-muted">How to revert commit to master.</p>
               </li>
               <li>
                 <h6><a href="https://gramli.github.io//posts/git/troubleshooting/sourcetree-missing-last-commit" class="link-primary">SourceTree rebase failed, missing last commit</a></h6>
-                <p class="text-muted">Posted on November 8, 2024</p>
+                <p class="text-muted">SourceTree drops last commit, how to revert.</p>
               </li>
-            </ul>
-          </div>
-          <div class="col">
-            <h4>Versioning</h4>
-            <ul>
               <li>
-                <h6><a href="#" class="link-primary">Package json Versioning</a></h6>
-                <p class="text-muted">Posted on November 8, 2024</p>
+                <h6><a href="https://gramli.github.io//posts/git/troubleshooting/source-tree-change-password" class="link-primary">SourceTree change user password</a></h6>
+                <p class="text-muted">How to change user password in SourceTree.</p>
+              </li>
+              <li>
+                <h6><a href="https://gramli.github.io//posts/git/troubleshooting/sourcetree-do-not-start" class="link-primary">SourceTree not starting</a></h6>
+                <p class="text-muted">SourceTree app do not start properly.</p>
               </li>
             </ul>
           </div>
@@ -153,10 +154,16 @@
             <h4>Configuration</h4>
             <ul>
               <li>
-                <h6><a href="#" class="link-primary">Visible internals from different project</a></h6>
-                <p class="text-muted">Posted on November 8, 2024</p>
+                <h6><a href="https://gramli.github.io//posts/configuration/project-internal-visible" class="link-primary">Visible internals from different project</a></h6>
+                <p class="text-muted">See internal classes from another C# project.</p>
+              </li>
+              <li>
+                <h6><a href="https://gramli.github.io//posts/configuration/package-json-versioning-caret" class="link-primary">Package json Versioning - Caret</a></h6>
+                <p class="text-muted">Caret Ranges cheat sheet.</p>
               </li>
             </ul>
+          </div>
+          <div class="col">
           </div>
         </div>
       </section>
@@ -177,7 +184,7 @@
         <h2>Contact</h2>
         <p class="lead">
           Feel free to reach out via
-          <a href="https://github.com/Gramli">GitHub</a>.
+          <a href="https://github.com/Gramli"><img src="assets/github-mark.svg" class="social" alt="Github Icon"></a>
         </p>
       </section>
       <hr style="width:100%;text-align:left;margin-left:0">

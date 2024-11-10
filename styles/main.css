@@ -6,3 +6,11 @@ img{
   height: 2rem;
   width: 2rem;
 }
+
+.social {
+  height: 1.75rem;
+  width: 1.75rem;
+  margin-left: 1rem;
+  margin-top: 0;
+  padding-top: 0;
+}
