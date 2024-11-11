@@ -22,8 +22,8 @@ The first approach is to use VSA in the base with a feature folder structure and
 <table>
   <thead>
     <tr>
-      <th width="500px">Vertical Slice Architecture Hybrid First Approach </th>
-      <th width="500px">Clean Architecture Hybrid First Approach</th>
+      <th width="50%">Vertical Slice Architecture Hybrid First Approach </th>
+      <th width="50%">Clean Architecture Hybrid First Approach</th>
     </tr>
   </thead>
   <tbody>
