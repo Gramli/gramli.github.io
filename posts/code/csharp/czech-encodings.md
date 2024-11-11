@@ -1,12 +1,24 @@
 # Czech Encodings in .NET Core. Like Windows-1250, ISO 8859-2, CP852
 
+### 1. install System.Text.Encoding.CodePages
+package manager:
+```
+Install-Package System.Text.Encoding.CodePages -Version 8.0.0
+```
+
+[nuget link](https://www.nuget.org/packages/system.text.encoding.codepages/)
+### 2. Register it
+Register it in some main configuration file:
+```csharp
+using System.Text;
+
+Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+```
+
+### 2. register and use it in code:
 ```csharp
 using KamenickyEncoding;
 using System.Text;
-
-//Need to install System.Text.Encoding.CodePages
-//Then register CodePagesEncodingProvider
-Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 
 // Windows-1250
 // Default character set for Czech language under MS Windows
