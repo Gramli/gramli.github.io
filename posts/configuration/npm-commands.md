@@ -1,6 +1,4 @@
-# Package json Scripts
-
-Cheat sheet for package.json angular scripts and work with dependencies.
+# Npm commands cheat sheet
 
 ### Clear and reinstall dependencies
 * Git Bash
