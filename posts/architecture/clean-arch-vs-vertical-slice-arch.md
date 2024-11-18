@@ -1,6 +1,7 @@
-## Comparsion of Vertical Slice Architecture and Clean Architecture
+*Posted 11/15/2024*
+# Comparsion of Vertical Slice Architecture and Clean Architecture
 
-### Pull Request of new CRUD endpoint
+## Pull Request of new CRUD endpoint
 Clean Architecture - [Pull Request](https://github.com/Gramli/WeatherApi/pull/2)
 
 Vertical Slice Architecture (VSA) - [Pull Request](https://github.com/Gramli/WeatherApi-VSA/pull/1)

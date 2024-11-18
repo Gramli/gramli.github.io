@@ -1,3 +1,4 @@
+*Posted 11/15/2024*
 # Throwing Exceptions vs Result Pattern
 In the realm of error handling and control flow in C# programming, developers often encounter the choice between two primary approaches: Throwing Exceptions and employing the Result Pattern. The Throwing Exceptions method relies on the standard exception mechanism to handle error conditions, while the Result Pattern entails returning a structured result object containing both the result of the operation and any potential error information. This benchmark measure aims to compare the performance of these two approaches.
 

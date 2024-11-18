@@ -1,3 +1,4 @@
+*Posted 11/15/2024*
 # ASP.NET Minimal API
 
 ## Pros
@@ -15,6 +16,7 @@
    - Minimal APIs have a smaller memory footprint, making them ideal for serverless environments or resource-constrained systems.
 - **Built-in Support for OpenAPI/Swagger**
     - Minimal APIs include built-in support for generating OpenAPI/Swagger documentation without requiring additional configuration or significant effort.
+
 ## Cons
 - **Maintenance and Readability**
   - As the project grows, maintaining endpoints can become challenging.

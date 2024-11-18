@@ -1,3 +1,4 @@
+*Posted 11/15/2024*
 # Clean Architecture
 ## Pros
 - **UI/Framework/Database Independence** 
@@ -11,6 +12,7 @@
 	- The core domain is independent of frameworks, making it reusable across different platforms.
 - **Clear Boundaries**
   - Establishes well-defined boundaries between components, which helps teams divide work effectively.
+
 ## Cons
 - **Understanding and Complexity**
 	- Understanding the architecture can be challenging, especially for developers or teams unfamiliar with it. Deciding how to split responsibilities or assign code to the correct layer often requires experience and careful consideration.

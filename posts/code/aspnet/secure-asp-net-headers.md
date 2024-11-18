@@ -1,3 +1,4 @@
+*Posted 11/15/2024*
 # Secure ASP.NET Server Headers
 
 ### Remove server headers from response

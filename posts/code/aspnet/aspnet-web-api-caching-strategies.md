@@ -1,3 +1,4 @@
+*Posted 11/15/2024*
 # ASP.NET Core caching strategies
 
 <table>
