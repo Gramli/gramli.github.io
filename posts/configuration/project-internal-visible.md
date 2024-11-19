@@ -1,3 +1,4 @@
+*Posted 11/10/2024*
 # Visible internal classes from diferent project
 
 To be able see internal classes you have to add this code to source project .csproj file, fill ```_Parameter1``` attribute with destination project name:
