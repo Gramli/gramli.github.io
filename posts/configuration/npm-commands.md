@@ -1,6 +1,6 @@
 # Npm commands cheat sheet
 
-### Clear and reinstall dependencies
+### clear and reinstall dependencies
 * Git Bash
     ```bash
     rm -rf node_modules && rm package-lock.json && npm i
@@ -14,4 +14,9 @@
 ### clear cache
 ```bash
 npm cache clean --force
+```
+
+### Angular - run single test
+```bash
+npm t -- --include src/app/some-folder/some-test.spec.ts
 ```
