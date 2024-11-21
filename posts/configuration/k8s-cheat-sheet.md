@@ -14,7 +14,7 @@ my-svc.my-namespace.pod.cluster.local
 [Documentation](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/)
 
 ## Istio - Gateway and Virtual Service with different namespace
-To be able to work, Virtual Service has tu be in same namespace as gateway or you have to specify namespace of gateway like this:
+To function properly, the Virtual Service must either be in the same namespace as the gateway, or you need to specify the gateway's namespace like this:
 
 ### VirtualService
 ```yaml
