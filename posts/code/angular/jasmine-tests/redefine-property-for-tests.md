@@ -1,7 +1,14 @@
 *Posted 11/19/2024*
 # Redefine property of mock object
 
-Create Mock Object with properties and then redefine them:
+Create Mock Object with properties and then redefine them using **Object.defineProperty** like this:
+
+```typescript
+    Object.defineProperty(authService, 'isCurrentlyAuthenticated', { get: () => false });
+    Object.defineProperty(authService, 'isAuthenticated', { get: () => of(false) });
+```
+
+### Full example
 
 ```typescript
 import { Observable, of } from 'rxjs';

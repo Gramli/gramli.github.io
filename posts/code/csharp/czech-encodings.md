@@ -1,3 +1,4 @@
+*Posted 11/10/2024*
 # Czech Encodings in .NET Core. Like Windows-1250, ISO 8859-2, CP852
 
 ### 1. install System.Text.Encoding.CodePages

@@ -1,3 +1,4 @@
+*Posted 11/10/2024*
 # Remove diacritics using SINGLEBYTE LATIN ASCII ENCODING
 
 Install package **System.Text.Encoding.CodePages**
