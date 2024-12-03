@@ -35,8 +35,10 @@ To be able to compare with some fast solution I create static Dictionary -> Map 
         };
     }
 ```
-
+.NET7
 ![Measure One - Get Enum Attribute](../assets/getEnumAttribute.png)
+.NET9
+![Measure One - Get Enum Attribute](../assets/getEnumAttribute_net9.png)
 
 #### Summary
 Comparatively, the implementation with Dictionary shows significantly faster performance and avoids memory allocation when retrieving values by key. However, it requires manual editing every time a new item is added to the Enum.
