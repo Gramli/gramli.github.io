@@ -121,9 +121,9 @@ internal class ThrowExceptionHandler(Logger logger)
         }
     }
 ```
-.NET8
-![Throwing Exceptions vs Result Pattern](./assets/exceptionResult.png)
-.NET9
-![Throwing Exceptions vs Result Pattern](./assets/exceptionResult_net9.png)
+.NET8  
+![Throwing Exceptions vs Result Pattern](./assets/exceptionResult.png)  
+.NET9  
+![Throwing Exceptions vs Result Pattern](./assets/exceptionResult_net9.png)  
 ## Summary
 When examining the code, it's evident that the implementation with exception throwing appears much simpler and cleaner. However, I've observed numerous instances where exception throwing led to a cycle of catch and rethrow, resulting in spaghetti code. From the benchmark measure, it's apparent that this approach is also two or three times slower and allocates significantly more memory.
