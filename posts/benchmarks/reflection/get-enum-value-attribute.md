@@ -35,9 +35,10 @@ To be able to compare with some fast solution I create static Dictionary -> Map 
         };
     }
 ```
-.NET7  
+* .NET7  
 ![Measure One - Get Enum Attribute](../assets/getEnumAttribute.png)  
-.NET9  
+
+* .NET9  
 ![Measure One - Get Enum Attribute](../assets/getEnumAttribute_net9.png)  
 
 #### Summary
