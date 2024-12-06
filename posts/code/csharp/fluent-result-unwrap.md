@@ -82,21 +82,75 @@ namespace Extensions.FluentResult
 ```
 
 ## Usage
-You can use this method when creating an object by setting its properties. For example:
+Suppose we have a SpaceShip object and want to create an instance with all properties set. However, the methods returning these properties use the Result type, requiring us to handle potential errors. By using UnwrapOrWithErrors, we significantly reduce boilerplate code and make property initialization more concise and error-aware.
+
+Example: 
 
 ```csharp
 using FluentResults;
 
-var baseResult = new Result();
-
-var someObject = new SomeMyObject{
-    MyProperty1 = GetMyProperty1().UnwrapOrWithErrors(baseResult, string.Empty),
-    MyProperty2 = GetMyProperty2().UnwrapOrWithErrors(baseResult, 0),
-    MyNullableProperty = GetMyNullableProperty().UnwrapOrWithErrors(baseResult),
+public class SpaceShip 
+{
+    public string Name { get; init; }
+    public int GunsCount { get; init; }
+    public string? Owner { get; init; }
 }
 
+public class ShipCreator
+{
+    public Result<SpaceShip> Create()
+    {
+        var nameResult = GetName();
+        if(nameResult.IsFailed)
+        {
+            return Result.Fail(nameResult.Errors);
+        }
 
-private Result<string> GetMyProperty1() => ...;
-private Result<int> GetMyProperty2() => ...;
-private Result<long?> GetMyNullableProperty() => ...;
+        var gunsCountResult = GetGunsCount();
+        if(gunsCountResult.IsFailed)
+        {
+            return Result.Fail(gunsCountResult.Errors);
+        }
+
+        var ownerResult = GetOwner();
+        if(ownerResult.IsFailed)
+        {
+            return Result.Fail(ownerResult.Errors);
+        }
+
+        return new SpaceShip
+        {
+            Name = nameResult.Value,
+            GunsCount = gunsCountResult.Value,
+            Owner = ownerResult.Value
+        }
+    }
+
+    // Using the UnwrapOrWithErrors extension method, we can simplify this process:
+    public Result<SpaceShip> CreateWithExtension()
+    {
+        var resultAggregator = new Result();
+
+        var ship = new SpaceShip
+        {
+            // Unwrap Name with a default value and collect errors if any
+            Name = GetName().UnwrapOrWithErrors(resultAggregator, string.Empty),
+            // Unwrap GunsCount with a default value and collect errors if any
+            GunsCount = GetGunsCount().UnwrapOrWithErrors(resultAggregator, 0),
+            // Unwrap Owner with the default value of null
+            Owner = GetOwner().UnwrapOrWithErrors(resultAggregator)
+        };
+
+        if(resultAggregator.IsFailed)
+        {
+            return resultAggregator;
+        }
+
+        return Result.Ok(ship);
+    }
+
+    private Result<string> GetName() => Result.Ok("Falcon");
+    private Result<int> GetGunsCount() => Result.Ok(5);
+    private Result<string?> GetOwner() => Result.Ok(null);
+}
 ```

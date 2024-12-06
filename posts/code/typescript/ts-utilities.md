@@ -61,3 +61,7 @@ const api: ApiEndpoints = {
   POST_order: () => console.log("Create order"),
 };
 ```
+
+## Union and Intersection
+* A union type **|** only requires the object to match one of the types, but it allows extra properties.
+* An intersection type **&** requires the object to match all properties from both types.
