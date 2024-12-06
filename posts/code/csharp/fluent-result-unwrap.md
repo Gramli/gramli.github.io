@@ -1,6 +1,6 @@
 *Posted 11/10/2024*
 
-# FluentResult UnwrapOrDefault
+# FluentResult UnwrapOrWithErrors
 
 This is an extension method for the `Result` object in the [FluentResult](https://github.com/altmann/FluentResults) library.
 
