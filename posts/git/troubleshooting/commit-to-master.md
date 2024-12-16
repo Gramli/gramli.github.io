@@ -9,7 +9,7 @@ git reset --soft HEAD^
 Switch to you branche
 
 ```bash
-git checkout <branch>
+git checkout -b <branch>
 ```
 
 Commit the changes. In case you want to use original commit message, you can use ```-c ORIG_HEAD```
