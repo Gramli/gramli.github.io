@@ -21,6 +21,6 @@ git commit -c ORIG_HEAD
 
 ## In SourceTree
 1. Workspace => History
-    - Right click on origin/master row and select 'Reset current branche to this commit'
+    - Right click on **origin/master** or **master** row and select 'Reset current branche to this commit'
 2. New Branche
 3. Commit
