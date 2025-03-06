@@ -14,5 +14,8 @@
 - /doc
 
 ## VS Code
-- Inline chat `CTRL+I`
+- Inline chat `CTRL+I` or right click
 - Chat window `Ctrl+Alt+I`
+
+## Visual Studio
+- `ALT+/` or right click
