@@ -8,5 +8,5 @@
 
 ### Template
 ```html
-{{'messageWithParams' | translate : {something:text} }}
+"{{'messageWithParams' | translate : {something:text} }}"
 ```
