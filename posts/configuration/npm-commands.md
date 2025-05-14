@@ -21,3 +21,10 @@ npm cache clean --force
 ```bash
 npm t -- --include src/app/some-folder/some-test.spec.ts
 ```
+
+### Outdated
+This will list all the outdated dependencies, including their current and latest versions, so you can get oriented better what you should update.
+
+```bash
+npm outdated
+```
