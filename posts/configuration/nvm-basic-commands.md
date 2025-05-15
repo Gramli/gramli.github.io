@@ -1,12 +1,21 @@
 *Posted 11/10/2024*
-# NVM basic commands 
+# NVM and FNM basic commands 
+
+Most of the nvm commands works with fnm.
+
+### FNM setup
+#### Bash
+Add the following to your .bashrc profile:
+```bash
+eval "$(fnm env --use-on-cd --shell bash)"
+```
 
 ### check version
 ```bash
 node -v || node --version
 ```
 
-### list installed versions (via nvm)
+### list installed versions (via nvm/fnm)
 ```bash
 nvm ls
 ```
