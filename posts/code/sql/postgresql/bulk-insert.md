@@ -14,7 +14,7 @@ DECLARE
   ids INT[];
 BEGIN
   WITH inserted_users AS (
-    INSERT INTO beneficiary (
+    INSERT INTO user (
       name,
       street,
       postal_code,

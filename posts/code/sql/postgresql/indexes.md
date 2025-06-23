@@ -32,6 +32,19 @@ Indexes on foreign key columns improve query performance by reducing the number 
 * Cost of index creation -	Index creation on large tables can degrade performance temporarily.
 
 
+## CREATE INDEX
+```sql
+CREATE INDEX IF NOT EXISTS indexName ON tableName USING btree (columns);
+```
+- Locks the table, blocking writes while the index is being built.
+- Faster than CONCURRENTLY, but not suitable for production systems with live writes.
+
+### CREATE INDEX CONCURRENTLY
+
 ```sql
 CREATE INDEX CONCURRENTLY IF NOT EXISTS indexName ON tableName USING btree (columns);
 ```
+
+- Does not lock the table—reads and writes can continue during index creation.
+- Slower, but safe for production environments with ongoing traffic.
+- Use CONCURRENTLY when working on large tables in production to avoid downtime.
