@@ -3,8 +3,8 @@
 # shareReplay
 https://www.learnrxjs.io/learn-rxjs/operators/multicasting/sharereplay
 
-idealni pro cachovani staticky dat jako ciselniky. Daji se tim omezit zbytecna volani na BE.
-Pouziti:
+Simple way to cache data, ideal for static values like enums for example. When Frontend needs this data it doesnt have to call it every time it steps to page but get it from cache.
+Example:
 
 ```ts
 export class ContractInstructionService {
@@ -23,4 +23,4 @@ export class ContractInstructionService {
   }
 ```
 
-Pri tomto nastaveni se get zavola pri prvnim subscribe (subscribe na getContractInstructionDetailOptions()) a pri kazdem dalsim se pouzije zacechovana hodnota a pouziva se tak dlouho dokud zije service. shareReplay se da samozdrejme nakonfigurovat vice zpusoby.
+When shareReplay is set like code above, backend is called when first subcribe is created on getContractInstructionDetailOptions() function then every getContractInstructionDetailOptions call returns value from cache. Cached value lives as long as ContractInstructionService lives.

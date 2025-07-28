@@ -4,6 +4,8 @@
 
 Nastaveni Cache-Control header - ASP.NET ma build in support pro [response caching](https://learn.microsoft.com/en-us/aspnet/core/performance/caching/response?view=aspnetcore-9.0), ale je delane pro [MVC](https://github.com/dotnet/aspnetcore/issues/58604). kazdopadne lze to jednoduse udelat i pro web service (bez MVC) a to nastavenim output filtru, ktery ten cache-control header po zpracovani requestu nastavi
 
+
+
 ```C#
     endpointRouteBuilder.MapGet($"{RoutePrefix}/claims/search/options",
         async ([FromServices] IGetBatchClaimsFilterOptionsQueryHandler handler, CancellationToken cancellationToken) =>
