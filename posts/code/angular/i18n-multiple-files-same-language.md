@@ -1,6 +1,6 @@
 *Posted 09/22/2025*
 
-When a project grows, our translation JSON file can become really large. A logical solution is to split it into multiple JSON files by feature, for example. However, in that case, you need to provide your own implementation for loading multiple files. Here’s how you can split large translation files into smaller feature-specific files and still load them all with @ngx-translate.
+When a project grows, the translation JSON file can become very large. A logical solution is to split it into multiple JSON files, which improves both maintainability and readability. However, in that case, you need to implement your own way of loading multiple files. Here’s how you can split large translation files into smaller, feature-specific files and still load them all with @ngx-translate using Angular module approach.
 
 ## Example Structure
 src  
