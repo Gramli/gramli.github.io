@@ -1,26 +1,29 @@
 *Posted 07/25/2025*
 
 # shareReplay
-https://www.learnrxjs.io/learn-rxjs/operators/multicasting/sharereplay
+[sharereplay](https://www.learnrxjs.io/learn-rxjs/operators/multicasting/sharereplay) - caches the latest emitted value from an observable so multiple subscribers can share it without triggering multiple backend calls.
 
-Simple way to cache data, ideal for static values like enums for example. When Frontend needs this data it doesnt have to call it every time it steps to page but get it from cache.
-Example:
+A simple way to cache data, ideal for static values like enums. When the frontend needs this data, it doesn’t have to call the backend every time the page is visited — it can get it from the cache.
+
+**Example:**
 
 ```ts
 export class ContractInstructionService {
-  private contractInstructionDetailOptions: Observable<IContractInstructionDetailOptions>;
+  private userOptions: Observable<UserOptions>;
 
-  constructor(private hv2ApiHttpClientProxy: Hv2ApiHttpClientProxy) {
+  constructor(private httpClient: HttpClient) {
 
-    this.contractInstructionDetailOptions = this.hv2ApiHttpClientProxy
-      .get<IContractInstructionDetailOptions>('/v1/contractInstruction/detail/options')
-      .pipe(map((response: DataResponse<IContractInstructionDetailOptions>) => response.data))
+    this.contractInstructionDetailOptions = this.httpClient
+      .get<UserOptions>('/v1/user/')
       .pipe(shareReplay());
   }
 
   getContractInstructionDetailOptions() {
-    return this.contractInstructionDetailOptions;
+    return this.userOptions;
   }
 ```
 
-When shareReplay is set like code above, backend is called when first subcribe is created on getContractInstructionDetailOptions() function then every getContractInstructionDetailOptions call returns value from cache. Cached value lives as long as ContractInstructionService lives.
+When shareReplay is used like in the example above:
+- The backend is called only on the first subscription to getContractInstructionDetailOptions().
+- Subsequent calls return the cached value.
+- The cached value persists as long as the ContractInstructionService instance exists.

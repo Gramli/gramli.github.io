@@ -11,7 +11,7 @@
 | **Pros** | - Offloads server work to client/proxy <br> - Reduces bandwidth | - Skips re-executing controller/endpoint <br> - Works even if client disables caching |
 | **Cons** | - Relies on client/proxy honoring headers <br> - No server control once cached externally | - Increases server memory usage <br> - Cache invalidation needed when data changes |
 
-👉 Rule of thumb:  
+## When to use
 - Use **Response Caching** when responses are **static or public** and can safely be cached by browsers/CDNs.  
 - Use **Output Caching** when responses are **costly to generate** and you want the server to short-circuit execution.  
 - Combine both if you want **server + client/proxy caching**.
