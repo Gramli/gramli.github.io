@@ -2,16 +2,14 @@
 
 # Response Caching
 
-Nastaveni Cache-Control header - ASP.NET ma build in support pro [response caching](https://learn.microsoft.com/en-us/aspnet/core/performance/caching/response?view=aspnetcore-9.0), ale je delane pro [MVC](https://github.com/dotnet/aspnetcore/issues/58604). kazdopadne lze to jednoduse udelat i pro web service (bez MVC) a to nastavenim output filtru, ktery ten cache-control header po zpracovani requestu nastavi
-
-
+Setting the `Cache-Control` header – ASP.NET has built-in support for [response caching](https://learn.microsoft.com/en-us/aspnet/core/performance/caching/response?view=aspnetcore-9.0), but it is mainly designed for [MVC](https://github.com/dotnet/aspnetcore/issues/58604).
+For web services (without MVC), it can be implemented by adding an output filter that sets the `Cache-Control` header after the request is processed.
 
 ```C#
-    endpointRouteBuilder.MapGet($"{RoutePrefix}/claims/search/options",
-        async ([FromServices] IGetBatchClaimsFilterOptionsQueryHandler handler, CancellationToken cancellationToken) =>
-            await handler.SendAsync(EmptyRequest.Instance, cancellationToken))
-        .ProducesHttpDataResponse<BatchClaimsFilterOptionsDto>()
-        .RequireRoleAuthorization(AuthorizationPolicyFactory.JwtPolicy, HV2Roles.AP_HV2_SUPERVISOR, HV2Roles.AP_HV2_ITADMIN)
+    endpointRouteBuilder.MapGet($"users/{{id}}",
+        async (int id, [FromServices] IGetBatchClaimsFilterOptionsQueryHandler handler, CancellationToken cancellationToken) =>
+            await handler.SendAsync(id, cancellationToken))
+        .ProducesHttpDataResponse<UserDto>()
         .AddResponseCacheHourHeader()
 ```
 
@@ -35,5 +33,6 @@ Nastaveni Cache-Control header - ASP.NET ma build in support pro [response cachi
     }
 ```
 
-Dle nastaveni CacheControl se pak hodnota cachuje bud na clientovi nebo po ceste (treba na proxy, zalezi na nastaveni), pokud se ale ma cachovat na clientovi je nutne aby client (browser) nemel disablovanou cache.
-O samotne cachovani na strane clienta se pak stara browser.
+With the `Cache-Control` header, responses can be cached on the client or along the way (e.g., on a proxy).
+For client-side caching, the browser must not have caching disabled.
+The browser then handles the cached responses.
