@@ -1,4 +1,4 @@
-*Posted 02/28/2024*
+*Posted 11/12/2024*
 
 # Tips and Tricks for Copilot in VS Code and VS
 
