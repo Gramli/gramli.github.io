@@ -14,7 +14,7 @@ export class ContractInstructionService {
   constructor(private httpClient: HttpClient) {
 
     this.contractInstructionDetailOptions = this.httpClient
-      .get<UserOptions>('/v1/user/')
+      .get<UserOptions>('/v1/user/options')
       .pipe(shareReplay());
   }
 
