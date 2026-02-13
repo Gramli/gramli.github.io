@@ -442,18 +442,19 @@ header {
   margin-bottom: 1.5rem;
   /* Removed border-left style per request to use > bullet */
   /* border-left: 2px solid var(--color-navy-light); */
-  padding-left: 0;
-  display: flex; /* alignment for custom bullet */
-  align-items: baseline; 
+  padding-left: 1.5rem; /* Space for bullet */
+  position: relative;
+  display: block; /* Restore block layout so h6 and p stack */
 }
 
 .tech-card li::before {
     content: '>';
     color: var(--color-alert);
-    margin-right: 1rem;
+    position: absolute;
+    left: 0;
+    top: 0;
     font-weight: 700;
     font-family: monospace;
-    flex-shrink: 0; /* Prevent bullet from shrinking */
 }
 
 /* 
