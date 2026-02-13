@@ -10,6 +10,7 @@
   --color-cyan:        #00bcd4;
   --color-cyan-bright: #00f3ff;
   --color-accent-alt:  #ffb300; 
+  --color-alert:       #ffb300; /* Red alert color */
 
   /* -- Text -- */
   --color-text-main:   #e0f7fa;
@@ -45,7 +46,7 @@ body {
 }
 
 /* -- Typography -- */
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   font-family: var(--font-display);
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -56,6 +57,7 @@ h1, h2, h3, h4 {
 h1 { font-size: 2.5rem; text-shadow: var(--glow-text); margin-bottom: 0.5rem; }
 h2 { font-size: 1.5rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
 h4 { font-size: 1.1rem; color: var(--color-cyan-bright); margin-bottom: 1rem; }
+h5 { font-size: 1rem; color: var(--color-accent-alt); margin-bottom: 0.75rem; }
 p { color: var(--color-text-muted); max-width: 65ch; }
 
 a {
@@ -66,7 +68,7 @@ a {
 a:hover {
   color: var(--color-cyan-bright);
   text-shadow: var(--glow-text);
-  letter-spacing: 0.05em;
+  /* letter-spacing: 0.05em; REMOVED per user request to stop font growth */
 }
 
 /* -- Layout Components -- */
@@ -438,14 +440,27 @@ header {
 
 .tech-card li {
   margin-bottom: 1.5rem;
-  border-left: 2px solid var(--color-navy-light);
-  padding-left: 1rem;
-  transition: border-color 0.2s;
+  /* Removed border-left style per request to use > bullet */
+  /* border-left: 2px solid var(--color-navy-light); */
+  padding-left: 0;
+  display: flex; /* alignment for custom bullet */
+  align-items: baseline; 
 }
 
+.tech-card li::before {
+    content: '>';
+    color: var(--color-alert);
+    margin-right: 1rem;
+    font-weight: 700;
+    font-family: monospace;
+    flex-shrink: 0; /* Prevent bullet from shrinking */
+}
+
+/* 
 .tech-card li:hover {
   border-left-color: var(--color-cyan);
-}
+} 
+*/
 
 .tech-card h6 {
   margin: 0 0 0.25rem 0;
