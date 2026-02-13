@@ -14,7 +14,8 @@
 
   /* -- Text -- */
   --color-text-main:   #e0f7fa;
-  --color-text-muted:  #819ca9;
+  --color-text-muted:  #a4aeae;
+  --color-text-muted-strong:  #c5d1d1;
 
   /* -- Typography -- */
   --font-display: 'Michroma', sans-serif;
@@ -58,7 +59,7 @@ h1 { font-size: 2.5rem; text-shadow: var(--glow-text); margin-bottom: 0.5rem; }
 h2 { font-size: 1.5rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
 h4 { font-size: 1.1rem; color: var(--color-cyan-bright); margin-bottom: 1rem; }
 h5 { font-size: 1rem; color: var(--color-accent-alt); margin-bottom: 0.75rem; }
-p { color: var(--color-text-muted); max-width: 65ch; }
+p { color: var(--color-text-muted); }
 
 a {
   color: var(--color-cyan);
@@ -479,6 +480,10 @@ header {
 /* Force override common Bootstrap classes found in includes */
 .widget-style .text-muted { color: var(--color-text-muted) !important; font-size: 0.9rem; margin: 0; }
 .widget-style .link-primary { color: var(--color-cyan) !important; text-decoration: none; display:block; margin-bottom:4px; }
+.tech-card.widget-style a:hover,
+.widget-style .link-primary:hover {
+  color: var(--color-accent-alt) !important;
+}
 .widget-style .col-lg-4, 
 .widget-style .col-md-auto, 
 .widget-style .col-sm-auto { 
@@ -527,6 +532,22 @@ footer {
 /* -- External Library Overrides -- */
 .markdown-body {
   padding: 1rem !important; /* Add vertical breathing room, rely on container for horizontal */
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5 {
+  text-transform: none !important;
+}
+
+.markdown-body li {
+  color: var(--color-text-muted);
+}
+
+.markdown-body strong {
+  color: var(--color-text-muted-strong);
 }
 
 @media (min-width: 768px) {

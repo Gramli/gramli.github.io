@@ -309,6 +309,7 @@ Intel Core i5-6400 CPU 2.70GHz (Skylake), 1 CPU, 4 logical and 4 physical cores
 
 Job=.NET 10.0  Runtime=.NET 10.0
 ```
+
 | Method                    | data      | Mean      | Error     | StdDev    | Gen0   | Allocated |
 |-------------------------- |---------- |----------:|----------:|----------:|-------:|----------:|
 | Result_Pattern            | 100 items |  1.384 us | 0.0227 us | 0.0212 us | 0.2251 |     704 B |
