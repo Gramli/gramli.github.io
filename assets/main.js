@@ -1,4 +1,17 @@
+document.addEventListener("DOMContentLoaded", function () {
+    var searchBar = document.getElementById('searchBar');
+    if (searchBar) {
+        searchBar.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                search();
+            }
+        });
+    }
+});
+
 function search() {
-    var searchText = $("#searchBar").val();
-    window.find(searchText);
- }
+    var input = document.getElementById("searchBar");
+    if (input && input.value) {
+        window.find(input.value);
+    }
+}
