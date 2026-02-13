@@ -526,9 +526,7 @@ footer {
 
 /* -- External Library Overrides -- */
 .markdown-body {
-  padding: 1rem 0 !important; /* Add vertical breathing room, rely on container for horizontal */
-  background-color: transparent !important; /* Let the tech-card background show through */
-  font-family: var(--font-body) !important; /* Harmonize fonts */
+  padding: 1rem !important; /* Add vertical breathing room, rely on container for horizontal */
 }
 
 @media (min-width: 768px) {
