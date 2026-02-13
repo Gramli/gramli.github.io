@@ -430,15 +430,15 @@ header {
 }
 
 /* -- Compatibility Layer for Includes -- */
-/* Targeting elements inside the included HTML files */
+/* Targeting elements inside the included HTML files using a separate class 'widget-style' */
 
-.tech-card ul {
+.widget-style ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.tech-card li {
+.widget-style li {
   margin-bottom: 1.5rem;
   /* Removed border-left style per request to use > bullet */
   /* border-left: 2px solid var(--color-navy-light); */
@@ -447,7 +447,7 @@ header {
   display: block; /* Restore block layout so h6 and p stack */
 }
 
-.tech-card li::before {
+.widget-style li::before {
     content: '>';
     color: var(--color-alert);
     position: absolute;
@@ -458,19 +458,19 @@ header {
 }
 
 /* 
-.tech-card li:hover {
+.widget-style li:hover {
   border-left-color: var(--color-cyan);
 } 
 */
 
-.tech-card h6 {
+.widget-style h6 {
   margin: 0 0 0.25rem 0;
   font-family: var(--font-mono);
   font-size: 1rem;
 }
 
 /* Ensure inner headers look like card titles */
-.tech-card h4 {
+.widget-style h4 {
   border-bottom: 1px solid var(--color-border);
   padding-bottom: 0.5rem;
   margin-bottom: 1.5rem;
@@ -479,11 +479,11 @@ header {
 }
 
 /* Force override common Bootstrap classes found in includes */
-.tech-card .text-muted { color: var(--color-text-muted) !important; font-size: 0.9rem; margin: 0; }
-.tech-card .link-primary { color: var(--color-cyan) !important; text-decoration: none; display:block; margin-bottom:4px; }
-.tech-card .col-lg-4, 
-.tech-card .col-md-auto, 
-.tech-card .col-sm-auto { 
+.widget-style .text-muted { color: var(--color-text-muted) !important; font-size: 0.9rem; margin: 0; }
+.widget-style .link-primary { color: var(--color-cyan) !important; text-decoration: none; display:block; margin-bottom:4px; }
+.widget-style .col-lg-4, 
+.widget-style .col-md-auto, 
+.widget-style .col-sm-auto { 
   width: 100% !important; 
   max-width: 100% !important; 
   padding: 0 !important; 
