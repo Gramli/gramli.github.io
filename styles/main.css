@@ -284,7 +284,20 @@ header {
 @media (max-width: 768px) {
     .search-box { display: none; } /* Hide search on mobile if not critical, or move */
     
-    .nav-toggle { display: flex; }
+    .nav-toggle { display: flex; margin-right: 0.5rem; }
+    
+    .nav-container {
+        padding: 0 1rem; /* Reduce padding for small screens */
+    }
+
+    .nav-brand span {
+        font-size: 0.9rem; /* Smaller text for brand */
+        /* Optional: truncate if still too long */
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
     
     .nav-links {
         display: none;
@@ -292,7 +305,15 @@ header {
         width: 100vw;
         position: absolute;
         top: 100%;
-        left: -2rem; /* Account for nav-container padding */
+        left: 0; /* Align with viewport, parent has relative position but we want full width */
+        /* Fix for the parent padding: we need to negative margin or calc content */
+        /* Actually, simpler to just set left: 0 and width: 100% relative to viewport implies fixed/absolute to body, 
+           but here it is absolute to nav-container. 
+           nav-container has padding. Let's make nav-links ignore container width.
+        */
+        left: -1rem; /* Compensate for container padding-left */
+        width: calc(100% + 2rem); /* Compensate for container padding both sides */
+        
         padding: 1rem 0;
         background: var(--color-navy);
         border-bottom: 1px solid var(--color-cyan);
