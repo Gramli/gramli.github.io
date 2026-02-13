@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>Local Design Test</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Inter:wght@300;400;600&family=Michroma&display=swap" rel="stylesheet">
+    
+    <!-- Local CSS (Simulated Path) -->
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/syntax.css" />
+    
+    <!-- GitHub Markdown CSS (The fix we are testing: no integrity attribute) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.0/github-markdown-dark.min.css" />
+    
+    <style>
+        /* Simulate body background since we aren't using the full liquid layout */
+        body { margin: 0; padding: 2rem; background: #00050d; color: #e0f7fa; }
+        .main-wrapper { max-width: 1200px; margin: 0 auto; }
+    </style>
+  </head>
+  <body>
+
+    <main class="main-wrapper">
+      
+      <!-- 1. BLOG POST SIMULATION -->
+      <!-- Should rely on GitHub Markdown CSS, NOT main.css widget styles -->
+      <h2 style="color: yellow; margin-top: 2rem;">TEST 1: Blog Post (Should be Standard Markdown)</h2>
+      <article class="tech-card dashboard-section">
+        <header>
+          <h1>Blog Post Title</h1>
+        </header>
+
+        <div class="markdown-body">
+          <p>This is a standard paragraph in a blog post.</p>
+          <ul>
+            <li>List item 1 (Should be standard disc bullet, not '>')</li>
+            <li>List item 2</li>
+          </ul>
+          <h3>Header 3</h3>
+          <p>Code example:</p>
+          
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">using</span> <span class="nn">Microsoft.Extensions.Primitives</span><span class="p">;</span>
+
+  <span class="n">app</span><span class="p">.</span><span class="nf">Use</span><span class="p">(</span><span class="k">async</span> <span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">next</span><span class="p">)</span> <span class="p">=&gt;</span>
+  <span class="p">{</span>
+      <span class="n">context</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"Content-Security-Policy"</span><span class="p">,</span> <span class="k">new</span> <span class="nf">StringValues</span><span class="p">(</span><span class="s">"default-src 'self'"</span><span class="p">));</span>
+      <span class="n">context</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"X-Content-Type-Options"</span><span class="p">,</span> <span class="k">new</span> <span class="nf">StringValues</span><span class="p">(</span><span class="s">"nosniff"</span><span class="p">));</span>
+      <span class="n">context</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"X-Frame-Options"</span><span class="p">,</span> <span class="k">new</span> <span class="nf">StringValues</span><span class="p">(</span><span class="s">"SAMEORIGIN"</span><span class="p">));</span>
+      <span class="n">context</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"X-XSS-Protection"</span><span class="p">,</span> <span class="k">new</span> <span class="nf">StringValues</span><span class="p">(</span><span class="s">"1; mode=block"</span><span class="p">));</span>
+      <span class="k">await</span> <span class="nf">next</span><span class="p">();</span>
+  <span class="p">});</span>
+</code></pre></div>    </div>
+        </div>
+      </article>
+
+      <!-- 2. HOMEPAGE WIDGET SIMULATION -->
+      <!-- Should have custom '>' bullets and dashboard styling -->
+      <h2 style="color: yellow; margin-top: 4rem;">TEST 2: Dashboard Widget (Should have Custom Styling)</h2>
+      <div class="dashboard-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+          
+          <div class="tech-card widget-style">
+            <h4>Widget Title</h4>
+            <ul>
+                <li>
+                    <h6><a class="link-primary" href="#">Link Item 1</a></h6>
+                    <p class="text-muted">Description of the link.</p>
+                </li>
+                <li>
+                    <h6><a class="link-primary" href="#">Link Item 2</a></h6>
+                    <p class="text-muted">Description 2.</p>
+                </li>
+            </ul>
+          </div>
+
+      </div>
+
+    </main>
+  </body>
+</html>

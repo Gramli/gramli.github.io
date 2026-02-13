@@ -405,9 +405,7 @@ header {
   transition: transform 0.3s var(--ease-tech), box-shadow 0.3s var(--ease-tech);
 }
 
-.tech-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--glow-subtle);
+.tech-card:not(article):hover {
   border-color: var(--color-cyan);
 }
 
