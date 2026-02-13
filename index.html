@@ -8,7 +8,8 @@ title: Home
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Daniel Balcarek" />
     <meta name="description" content="Technical programming journal and architectural archives." />
-    <title>GRAMLI // ARCHITECT_TERMINAL</title>
+    <!-- Professional Title for Recruiters/SEO -->
+    <title>Daniel Balcarek | Senior Software Engineer</title>
    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,16 +27,29 @@ title: Home
         <div class="nav-brand">
           <a href="#" style="display:flex; align-items:center; gap:0.5rem;">
             <img src="assets/avatars.ico" class="icon" alt="System Icon" style="height:2rem; width:2rem; border-radius:50%; border:1px solid var(--color-cyan);">
-            <span style="font-family:var(--font-display); color:var(--color-text-main);">GRAMLI_SYS</span>
+            <span style="font-family:var(--font-display); color:var(--color-text-main);">DANIEL_BALCAREK_SYS</span>
           </a>
         </div>
+
+        <!-- Hamburger Menu Button -->
+        <button class="nav-toggle" aria-label="Toggle Navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
         
         <ul class="nav-links">
-            <li><a href="#sector-core" class="nav-link">Core_Langs</a></li>
-            <li><a href="#sector-arch" class="nav-link">Arch_Git</a></li>
-            <li><a href="#sector-web" class="nav-link">Web_Stack</a></li>
-            <li><a href="#sector-data" class="nav-link">Data_AI</a></li>
-            <li><a href="#comms" class="nav-link">Comms</a></li>
+            <li><a href="#overview" class="nav-link">Overview</a></li>
+            <li class="nav-item has-dropdown">
+                <a href="#blog-sectors" class="nav-link">Blog <span style="font-size:0.7em">▼</span></a>
+                <div class="dropdown-menu">
+                    <a href="#sector-core">Backend Engineering</a>
+                    <a href="#sector-arch">Architecture & DevOps</a>
+                    <a href="#sector-web">Frontend Development</a>
+                    <a href="#sector-data">Data & Intelligence</a>
+                </div>
+            </li>
+            <li class="mobile-only"><a href="#comms" class="nav-link">Contact</a></li>
         </ul>
 
         <div class="search-box">
@@ -45,89 +59,109 @@ title: Home
       </div>
     </nav>
 
-    <!-- Header / Identity -->
-    <header>
-      <div class="identity-block">
-        <span class="role">:: SENIOR SOFTWARE ARCHITECT ::</span>
-        <h1>Daniel Balcarek</h1>
-        <p>
-          System log for daily programming operations. 
-          Straightforward technical directives. 
-          Best practices. Troubleshooting logs.
-        </p>
-        <p style="margin-top:1rem; font-family:var(--font-mono); font-size:0.8rem; color:var(--color-cyan-dim);">
-          STATUS: ONLINE // SYSTEM_VERSION: 2026.2
-        </p>
-      </div>
-      <div>
-        <!-- Using border-radius 50% for avatar feel, rectangular for banner feel. 
-             Code uses avatar feel in CSS media query mobile 
-        -->
-        <img src="assets/banner2.jfif" alt="Operator Avatar" class="banner-img" style="border-radius: 50%; width: 250px; height: 250px; object-fit: cover;">
-      </div>
-    </header>
-
     <main class="main-wrapper">
       
-      <!-- Sector 1: Core Technologies -->
-      <section id="sector-core" class="dashboard-section">
-        <h2>// SECTOR_01: CORE_SYSTEMS</h2>
-        <div class="dashboard-grid">
-            <div class="tech-card">{% include csharp.html %}</div>
-            <div class="tech-card">{% include asp-net.html %}</div>
-            <div class="tech-card">{% include benchmarks.html %}</div>
-        </div>
-      </section>
+      <!-- Overview Section -->
+      <section id="overview" class="overview-section">
+        <div class="overview-grid">
+            <!-- Identity / Short Bio -->
+            <div class="identity-panel">
+                <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem;">
+                     <img src="assets/banner2.jfif" alt="Avatar" class="avatar-large" style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover; border: 2px solid var(--color-cyan);">
+                     <div>
+                        <span class="role">:: SENIOR SOFTWARE ENGINEER ::</span>
+                        <h1>Daniel Balcarek</h1>
+                     </div>
+                </div>
+                <div class="bio-short">
+                    <p>
+                      System log for daily programming operations. 
+                      Straightforward technical directives. 
+                      Best practices. Troubleshooting logs.
+                    </p>
+                    <p style="margin-top:0.5rem; font-family:var(--font-mono); font-size:0.8rem; color:var(--color-cyan-dim);">
+                      STATUS: ONLINE // SYSTEM_VERSION: 2026.2
+                    </p>
+                </div>
+            </div>
 
-      <!-- Sector 2: Ops & Arch -->
-      <section id="sector-arch" class="dashboard-section">
-        <h2>// SECTOR_02: OPS_ARCHITECTURE</h2>
-        <div class="dashboard-grid">
-            <div class="tech-card">{% include git.html %}</div>
-            <div class="tech-card">{% include configuration.html %}</div>
-            <div class="tech-card">{% include architecture.html %}</div>
-        </div>
-      </section>
-
-      <!-- Sector 3: Frontend Grid -->
-      <section id="sector-web" class="dashboard-section">
-        <h2>// SECTOR_03: WEB_INTERFACE</h2>
-        <div class="dashboard-grid">
-            <div class="tech-card">{% include angular.html %}</div>
-            <div class="tech-card">{% include javascript.html %}</div>
-            <div class="tech-card">{% include typescript.html %}</div>
-        </div>
-      </section>
-
-      <!-- Sector 4: Data & AI -->
-      <section id="sector-data" class="dashboard-section">
-        <h2>// SECTOR_04: DATABASE_AI</h2>
-        <div class="dashboard-grid">
-            <div class="tech-card">{% include sql.html %}</div>
-            <div class="tech-card">{% include ai.html %}</div>
-            <!-- Placeholder for balance -->
-            <div class="tech-card" style="opacity:0.5; display: flex; align-items:center; justify-content:center; border-style:dashed;">
-                <span class="text-muted">[EMPTY_SLOT]</span>
+            <!-- Long Bio / Portfolio Style -->
+            <div class="bio-panel tech-border" style="padding: 1.5rem; border: 1px solid var(--color-navy-light); background: rgba(10, 25, 47, 0.7);">
+                <h3 class="panel-header" style="color:var(--color-cyan); margin-bottom:1rem;">// OPERATOR_PROFILE</h3>
+                <p>
+                  Senior Software Engineer specializing in C# and .NET Core. 
+                  My evolution began with Windows desktop applications and has expanded into modern Angular/React web ecosystems.
+                </p>
+                <p style="margin-top:1rem;">
+                  I view software engineering as a craft. I am a code quality perfectionist, dedicated to clean architecture, 
+                  maintainable codebases, and pragmatic solutions. This system archives my technical findings and benchmarks.
+                </p>
+                
+                <!-- Contact moved here for Desktop view per requirements to be 'Overview' -->
+                <div class="desktop-contact" style="margin-top:1.5rem; display:flex; gap:2rem;">
+                    <a href="https://github.com/Gramli" target="_blank">
+                        <img src="assets/github-mark.svg" class="social" alt="Github">
+                    </a>
+                    <a href="https://dev.to/gramli" target="_blank">
+                        <img src="assets/dev-to.svg" class="social" alt="Dev.to">
+                    </a>
+                </div>
             </div>
         </div>
       </section>
 
-      <!-- About & Comms -->
-      <hr style="border-color:var(--color-navy-light); margin: 4rem 0;">
-      
-      <div style="display:grid; grid-template-columns: 2fr 1fr; gap:3rem;">
-        <section id="about">
-            <h2>// OPERATOR_BIO</h2>
-            <p>
-              Senior Software Engineer specializing in C# and .NET Core. 
-              Evolution from Windows desktop to modern Angular/React web ecosystems. 
-              Software Craftsman. Code quality perfectionist.
-            </p>
-        </section>
+      <hr style="border-color:var(--color-navy-light); margin: 3rem 0;">
 
-        <section id="comms">
-            <h2>// COMMS_LINK</h2>
-            <div style="display:flex; align-items:center;">
+      <!-- Blog Wrapper -->
+      <div id="blog-sectors">
+          <!-- Sector 1: Core Technologies -->
+          <section id="sector-core" class="dashboard-section">
+            <h2>// 01. BACKEND ENGINEERING</h2>
+            <div class="dashboard-grid">
+                <div class="tech-card">{% include csharp.html %}</div>
+                <div class="tech-card">{% include asp-net.html %}</div>
+                <div class="tech-card">{% include benchmarks.html %}</div>
+            </div>
+          </section>
+
+          <!-- Sector 2: Ops & Arch -->
+          <section id="sector-arch" class="dashboard-section">
+            <h2>// 02. ARCHITECTURE & DEVOPS</h2>
+            <div class="dashboard-grid">
+                <div class="tech-card">{% include git.html %}</div>
+                <div class="tech-card">{% include configuration.html %}</div>
+                <div class="tech-card">{% include architecture.html %}</div>
+            </div>
+          </section>
+
+          <!-- Sector 3: Frontend Grid -->
+          <section id="sector-web" class="dashboard-section">
+            <h2>// 03. FRONTEND DEVELOPMENT</h2>
+            <div class="dashboard-grid">
+                <div class="tech-card">{% include angular.html %}</div>
+                <div class="tech-card">{% include javascript.html %}</div>
+                <div class="tech-card">{% include typescript.html %}</div>
+            </div>
+          </section>
+
+          <!-- Sector 4: Data & AI -->
+          <section id="sector-data" class="dashboard-section">
+            <h2>// 04. DATA & INTELLIGENCE</h2>
+            <div class="dashboard-grid">
+                <div class="tech-card">{% include sql.html %}</div>
+                <div class="tech-card">{% include ai.html %}</div>
+                <!-- Placeholder for balance -->
+                <div class="tech-card" style="opacity:0.5; display: flex; align-items:center; justify-content:center; border-style:dashed;">
+                    <span class="text-muted">[EMPTY_SLOT]</span>
+                </div>
+            </div>
+          </section>
+      </div>
+
+      <!-- Mobile Contact Footer (hidden on desktop generally, but user asked for contact on bottom for mobile) -->
+      <section id="comms" class="mobile-only" style="margin-top: 4rem; text-align: center;">
+            <h2>// CONTACT CHANNELS</h2>
+            <div style="display:flex; align-items:center; justify-content:center; gap:2rem;">
                 <a href="https://github.com/Gramli" target="_blank">
                     <img src="assets/github-mark.svg" class="social" alt="Github">
                 </a>
@@ -135,8 +169,7 @@ title: Home
                     <img src="assets/dev-to.svg" class="social" alt="Dev.to">
                 </a>
             </div>
-        </section>
-      </div>
+      </section>
 
     </main>
 

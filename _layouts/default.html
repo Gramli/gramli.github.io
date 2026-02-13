@@ -25,15 +25,29 @@
         <div class="nav-brand">
           <a href="{{ "/" | relative_url }}" style="display:flex; align-items:center; gap:0.5rem;">
             <img src="{{ "/assets/avatars.ico" | relative_url }}" class="icon" alt="System Icon" style="height:2rem; width:2rem; border-radius:50%; border:1px solid var(--color-cyan);">
-            <span style="font-family:var(--font-display); color:var(--color-text-main);">GRAMLI_SYS</span>
+            <span style="font-family:var(--font-display); color:var(--color-text-main);">DANIEL_BALCAREK_SYS</span>
           </a>
         </div>
         
+        <!-- Hamburger Menu Button -->
+        <button class="nav-toggle" aria-label="Toggle Navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
         <ul class="nav-links">
-            <li><a href="{{ "/" | relative_url }}#sector-core" class="nav-link">Core_Langs</a></li>
-            <li><a href="{{ "/" | relative_url }}#sector-arch" class="nav-link">Arch_Git</a></li>
-            <li><a href="{{ "/" | relative_url }}#sector-web" class="nav-link">Web_Stack</a></li>
-            <li><a href="{{ "/" | relative_url }}#about" class="nav-link">Operator</a></li>
+            <li><a href="{{ "/" | relative_url }}#overview" class="nav-link">Overview</a></li>
+            <li class="nav-item has-dropdown">
+                <a href="{{ "/" | relative_url }}#blog-sectors" class="nav-link">Blog <span style="font-size:0.7em">▼</span></a>
+                <div class="dropdown-menu">
+                    <a href="{{ "/" | relative_url }}#sector-core">Backend Engineering</a>
+                    <a href="{{ "/" | relative_url }}#sector-arch">Architecture & DevOps</a>
+                    <a href="{{ "/" | relative_url }}#sector-web">Frontend Development</a>
+                    <a href="{{ "/" | relative_url }}#sector-data">Data & Intelligence</a>
+                </div>
+            </li>
+            <li class="mobile-only"><a href="{{ "/" | relative_url }}#comms" class="nav-link">Contact</a></li>
         </ul>
       </div>
     </nav>
