@@ -405,7 +405,7 @@ header {
   transition: transform 0.3s var(--ease-tech), box-shadow 0.3s var(--ease-tech);
 }
 
-.tech-card:not(article):hover {
+.tech-card.widget-style:hover {
   border-color: var(--color-cyan);
 }
 
@@ -522,6 +522,19 @@ footer {
 .social:hover {
     transform: scale(1.1);
     filter: invert(79%) sepia(59%) saturate(499%) hue-rotate(130deg) brightness(101%) contrast(101%); /* Matches --color-cyan-bright */
+}
+
+/* -- External Library Overrides -- */
+.markdown-body {
+  padding: 1rem 0 !important; /* Add vertical breathing room, rely on container for horizontal */
+  background-color: transparent !important; /* Let the tech-card background show through */
+  font-family: var(--font-body) !important; /* Harmonize fonts */
+}
+
+@media (min-width: 768px) {
+  .markdown-body {
+    padding: 2rem !important;
+  }
 }
 
 @media (max-width: 768px) {
