@@ -4,56 +4,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="{{ "/assets/avatars.ico" | relative_url }}">
-{% seo %}
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    rel="stylesheet"/>
+    <link rel="icon" type="image/svg+xml" href="{{ "/assets/favicon.svg" | relative_url }}">
+    
+    <!-- Fonts (Space Opera Theme) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Inter:wght@300;400;600&family=Michroma&display=swap" rel="stylesheet">
+    
+    {% seo %}
+    
+    <!-- Custom Theme -->
     <link rel="stylesheet" href="{{ "/styles/main.css" | relative_url }}" />
     {% include head-custom.html %}
   </head>
   <body>
 
-    {% if site.title and site.title != page.title %}
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container">
-          <a href="{{ "/" | absolute_url }}"><img src="{{ "/assets/avatars.ico" | relative_url }}" class="icon" alt="Blog Icon"></a>
-          <a class="navbar-brand mt-1 ms-2" href="{{ "/" | absolute_url }}">Gramli's Blog</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="{{ "/#about" | absolute_url }}">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{ "/#contact" | absolute_url }}">Contact</a>
-              </li>
-            </ul>
-          </div>
+    <!-- HUD Navigation (Consistent) -->
+    <nav class="hud-nav">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <a href="{{ "/" | relative_url }}" style="display:flex; align-items:center; gap:0.5rem;">
+            <img src="{{ "/assets/avatars.ico" | relative_url }}" class="icon" alt="System Icon" style="height:2rem; width:2rem; border-radius:50%; border:1px solid var(--color-cyan);">
+            <span style="font-family:var(--font-display); color:var(--color-text-main);">DANIEL_BALCAREK_SYS</span>
+          </a>
         </div>
-      </nav>
-    {% endif %}
+        
+        <!-- Hamburger Menu Button -->
+        <button class="nav-toggle" aria-label="Toggle Navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
 
-    <div class="container-lg px-3 my-5 markdown-body">
-
-      {{ content }}
-
-      {% if site.github.private != true and site.github.license %}
-      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
-        This site is open source. {% github_edit_link "Improve this page" %}.
+        <ul class="nav-links">
+            <li><a href="{{ "/" | relative_url }}#overview" class="nav-link">Overview</a></li>
+            <li class="nav-item has-dropdown">
+                <a href="{{ "/" | relative_url }}#blog-sectors" class="nav-link">Blog <span style="font-size:0.7em">▼</span></a>
+                <div class="dropdown-menu">
+                    <a href="{{ "/" | relative_url }}#sector-core">Backend Engineering</a>
+                    <a href="{{ "/" | relative_url }}#sector-arch">Architecture & DevOps</a>
+                    <a href="{{ "/" | relative_url }}#sector-web">Frontend Development</a>
+                    <a href="{{ "/" | relative_url }}#sector-data">Data & Intelligence</a>
+                </div>
+            </li>
+            <li class="mobile-only"><a href="{{ "/" | relative_url }}#comms" class="nav-link">Contact</a></li>
+        </ul>
       </div>
-      {% endif %}
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </nav>
+
+    <main class="main-wrapper">
+      <!-- Article Container -->
+      <article class="tech-card dashboard-section">
+        {% if page.title %}
+        <header style="border-bottom: 1px solid var(--color-border); margin-bottom: 2rem; padding-bottom: 1rem;">
+          <h1>{{ page.title }}</h1>
+          {% if page.description %}
+          <p style="font-family:var(--font-mono); color:var(--color-cyan-dim);">{{ page.description }}</p>
+          {% endif %}
+        </header>
+        {% endif %}
+
+        <div class="markdown-body" style="font-family: var(--font-body); color: var(--color-text-main);">
+          {{ content }}
+        </div>
+
+        {% if site.github.private != true and site.github.license %}
+        <div style="margin-top: 3rem; padding-top: 1rem; border-top: 1px dashed var(--color-border); font-size: 0.8rem; font-family: var(--font-mono); color: var(--color-text-muted);">
+          STATUS: OPEN_SOURCE // {% github_edit_link "EDIT_RECORD" %}
+        </div>
+        {% endif %}
+      </article>
+
+      <footer>
+        &copy; 2024 Daniel Balcarek. Powered by GitHub Pages. <br>
+        <span style="color:var(--color-cyan-dim)">TERMINAL_SESSION_END</span>
+      </footer>
+
+    </main>
+    
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
     <script>anchors.add();</script>
+    <script src="{{ "/assets/main.js" | relative_url }}"></script>
   </body>
 </html>

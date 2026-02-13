@@ -7,152 +7,178 @@ title: Home
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Daniel Balcarek" />
-    <meta name="description" content="A blog programming." />
-    <title>Daniel Balcarek</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <meta name="description" content="Technical programming journal and architectural archives." />
+    <!-- Professional Title for Recruiters/SEO -->
+    <title>Daniel Balcarek | Senior Software Engineer</title>
+   
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Inter:wght@300;400;600&family=Michroma&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles/main.css" />
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <link rel="icon" type="image/x-icon" href="assets/avatars.ico">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-      <div class="container">
-        <a href="#"><img src="assets/avatars.ico" class="icon" alt="Blog Icon"></a>
-        <a class="navbar-brand mt-1 ms-2" href="#">
-          Gramli's Blog</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
+    
+    <!-- HUD Navigation -->
+    <nav class="hud-nav">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <a href="#" style="display:flex; align-items:center; gap:0.5rem;">
+            <img src="assets/avatars.ico" class="icon" alt="System Icon" style="height:2rem; width:2rem; border-radius:50%; border:1px solid var(--color-cyan);">
+            <span style="font-family:var(--font-display); color:var(--color-text-main);">DANIEL_BALCAREK_SYS</span>
+          </a>
+        </div>
+
+        <!-- Hamburger Menu Button -->
+        <button class="nav-toggle" aria-label="Toggle Navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto me-5">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Topics
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#posts">C#</a></li>
-                <li><a class="dropdown-item" href="#posts">ASP.NET</a></li>
-                <li><a class="dropdown-item" href="#posts">Benchmarks</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#posts1">Git</a></li>
-                <li><a class="dropdown-item" href="#posts1">Configuration</a></li>
-                <li><a class="dropdown-item" href="#posts1">Architecture</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#posts2">Angular</a></li>
-                <li><a class="dropdown-item" href="#posts2">JavaScript</a></li>
-                <li><a class="dropdown-item" href="#posts2">TypeScript</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#posts3">SQL</a></li>
-                <li><a class="dropdown-item" href="#posts3">AI</a></li>
-              </ul>
+        
+        <ul class="nav-links">
+            <li><a href="#overview" class="nav-link">Overview</a></li>
+            <li class="nav-item has-dropdown">
+                <a href="#blog-sectors" class="nav-link">Blog <span style="font-size:0.7em">▼</span></a>
+                <div class="dropdown-menu">
+                    <a href="#sector-core">Backend Engineering</a>
+                    <a href="#sector-arch">Architecture & DevOps</a>
+                    <a href="#sector-web">Frontend Development</a>
+                    <a href="#sector-data">Data & Intelligence</a>
+                </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" id="searchBar" placeholder="Search on page" aria-label="Search">
-            <button class="btn btn-outline-primary" type="button" onclick="search()">Search</button>
-          </form>
+            <li class="mobile-only"><a href="#comms" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="search-box">
+          <input type="text" class="search-input" id="searchBar" placeholder="SEARCH_DATABASE...">
+          <button class="search-btn" onclick="search()">[SCAN]</button>
         </div>
       </div>
     </nav>
 
-    <header>
-      <div class="container mt-5">
-        <div class="row">
-          <div class="col text-start">
-            <h1 class="display-4">Welcome</h1>
-            <p class="lead">
-              This blog is a space to capture and share insights from my daily programming tasks. 
-              Posts are straightforward, concise Markdown files focused on solving specific, small problems. 
-              Whether it’s troubleshooting code or exploring best practices, each entry aims to provide clear, practical solutions.
-            </p>
-          </div>
-          <div class="col-sm-auto col-md-auto col-lg-6 text-center">
-            <img
-              src="assets/banner2.jfif"
-              alt="Programming blog banner"
-              class="banner"
-            />
-          </div>
+    <main class="main-wrapper">
+      
+      <!-- Overview Section -->
+      <section id="overview" class="overview-section">
+        <div class="overview-grid">
+            <!-- Identity / Short Bio -->
+            <div class="identity-panel">
+                <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem;">
+                     <img src="assets/banner2.jfif" alt="Avatar" class="avatar-large" style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover; border: 2px solid var(--color-cyan);">
+                     <div>
+                        <span class="role">:: SENIOR SOFTWARE ENGINEER ::</span>
+                        <h1>Daniel Balcarek</h1>
+                     </div>
+                </div>
+                <div class="bio-short">
+                    <p>
+                      System log for daily programming operations. 
+                      Straightforward technical directives. 
+                      Best practices. Troubleshooting logs.
+                    </p>
+                    <p style="margin-top:0.5rem; font-family:var(--font-mono); font-size:0.8rem; color:var(--color-cyan-dim);">
+                      STATUS: ONLINE // SYSTEM_VERSION: 2026.2
+                    </p>
+                </div>
+            </div>
+
+            <!-- Long Bio / Portfolio Style -->
+            <div class="bio-panel tech-border" style="padding: 1.5rem; border: 1px solid var(--color-navy-light); background: rgba(10, 25, 47, 0.7);">
+                <h3 class="panel-header" style="color:var(--color-cyan); margin-bottom:1rem;">// OPERATOR_PROFILE</h3>
+                <p>
+                  Senior Software Engineer specializing in C# and .NET Core. 
+                  My evolution began with Windows desktop applications and has expanded into modern Angular/React web ecosystems.
+                </p>
+                <p style="margin-top:1rem;">
+                  I view software engineering as a craft. I am a code quality perfectionist, dedicated to clean architecture, 
+                  maintainable codebases, and pragmatic solutions. This system archives my technical findings and benchmarks.
+                </p>
+                
+                <!-- Contact moved here for Desktop view per requirements to be 'Overview' -->
+                <div class="desktop-contact" style="margin-top:1.5rem; display:flex; gap:2rem;">
+                    <a href="https://github.com/Gramli" target="_blank">
+                        <img src="assets/github-mark.svg" class="social" alt="Github">
+                    </a>
+                    <a href="https://dev.to/gramli" target="_blank">
+                        <img src="assets/dev-to.svg" class="social" alt="Dev.to">
+                    </a>
+                </div>
+            </div>
         </div>
+      </section>
+
+      <hr style="border-color:var(--color-navy-light); margin: 3rem 0;">
+
+      <!-- Blog Wrapper -->
+      <div id="blog-sectors">
+          <!-- Sector 1: Core Technologies -->
+          <section id="sector-core" class="dashboard-section">
+            <h2>// 01. BACKEND ENGINEERING</h2>
+            <div class="dashboard-grid">
+                <div class="tech-card">{% include csharp.html %}</div>
+                <div class="tech-card">{% include asp-net.html %}</div>
+                <div class="tech-card">{% include benchmarks.html %}</div>
+            </div>
+          </section>
+
+          <!-- Sector 2: Ops & Arch -->
+          <section id="sector-arch" class="dashboard-section">
+            <h2>// 02. ARCHITECTURE & DEVOPS</h2>
+            <div class="dashboard-grid">
+                <div class="tech-card">{% include git.html %}</div>
+                <div class="tech-card">{% include configuration.html %}</div>
+                <div class="tech-card">{% include architecture.html %}</div>
+            </div>
+          </section>
+
+          <!-- Sector 3: Frontend Grid -->
+          <section id="sector-web" class="dashboard-section">
+            <h2>// 03. FRONTEND DEVELOPMENT</h2>
+            <div class="dashboard-grid">
+                <div class="tech-card">{% include angular.html %}</div>
+                <div class="tech-card">{% include javascript.html %}</div>
+                <div class="tech-card">{% include typescript.html %}</div>
+            </div>
+          </section>
+
+          <!-- Sector 4: Data & AI -->
+          <section id="sector-data" class="dashboard-section">
+            <h2>// 04. DATA & INTELLIGENCE</h2>
+            <div class="dashboard-grid">
+                <div class="tech-card">{% include sql.html %}</div>
+                <div class="tech-card">{% include ai.html %}</div>
+                <!-- Placeholder for balance -->
+                <div class="tech-card" style="opacity:0.5; display: flex; align-items:center; justify-content:center; border-style:dashed;">
+                    <span class="text-muted">[EMPTY_SLOT]</span>
+                </div>
+            </div>
+          </section>
       </div>
-    </header>
 
-    <main class="container mt-5">
-      <hr style="width:100%;text-align:left;margin-left:0">
-      <section id="posts">
-        <div class="row">
-          <h2 class="my-4">Topics</h2>
-          {% include csharp.html %}
-          {% include asp-net.html %}
-          {% include benchmarks.html %}
-        </div>
+      <!-- Mobile Contact Footer (hidden on desktop generally, but user asked for contact on bottom for mobile) -->
+      <section id="comms" class="mobile-only" style="margin-top: 4rem; text-align: center;">
+            <h2>// CONTACT CHANNELS</h2>
+            <div style="display:flex; align-items:center; justify-content:center; gap:2rem;">
+                <a href="https://github.com/Gramli" target="_blank">
+                    <img src="assets/github-mark.svg" class="social" alt="Github">
+                </a>
+                <a href="https://dev.to/gramli" target="_blank">
+                    <img src="assets/dev-to.svg" class="social" alt="Dev.to">
+                </a>
+            </div>
       </section>
 
-      <section id="posts1" class="mt-4">
-        <div class="row">
-          {% include git.html %}
-          {% include configuration.html %}
-          {% include architecture.html %}
-        </div>
-      </section>
-
-      <section id="posts2" class="mt-4">
-        <div class="row">
-          {% include angular.html %}
-          {% include javascript.html %}
-          {% include typescript.html %}
-        </div>
-      </section>
-
-      <section id="posts3" class="mt-4">
-        <div class="row">
-          {% include sql.html %}
-          {% include ai.html %}
-        </div>
-      </section>
-
-      <hr style="width:100%;text-align:left;margin-left:0">
-      <section id="about" class="mt-5">
-        <h2>About Me</h2>
-        <p class="lead">
-          I'm a Senior Software Engineer specializing in C# and building applications with the .NET and .NET Core frameworks. 
-          I began my career as a frontend developer working with Windows desktop applications, but in recent years, I've focused on web development, 
-          primarily with Angular and React. I’m a software craftsman and enthusiast who values staying up-to-date with new trends and best practices, 
-          aiming for high code quality and optimal test coverage. This blog is my space to share experiences, tips, and lessons learned along the way.
-        </p>
-      </section>
-
-      <hr style="width:100%;text-align:left;margin-left:0">
-      <section id="contact" class="mt-5">
-        <h2>Contact</h2>
-        <p class="lead">
-          Feel free to reach me out via
-          <a href="https://github.com/Gramli"><img src="assets/github-mark.svg" class="social" alt="Github Icon"></a>
-          <a href="https://dev.to/gramli"><img src="assets/dev-to.svg" class="social" alt="Dev.to Icon"></a>
-        </p>
-      </section>
-      <hr style="width:100%;text-align:left;margin-left:0">
     </main>
 
-    <footer class="bg-dark text-white text-center mt-5">
-      &copy; 2024 Gramli. Powered by GitHub Pages.
+    <footer>
+      &copy; 2024 Daniel Balcarek. Powered by GitHub Pages. <br>
+      <span style="color:var(--color-cyan-dim)">TERMINAL_SESSION_END</span>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Legacy Script for Search -->
     <script src="assets/main.js"></script>
   </body>
 </html>

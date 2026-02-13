@@ -1,18 +1,525 @@
-.banner{
-  width:100%;
-  height:auto;
-  max-height: 350px;
+:root {
+  /* -- Core Palette: Deep Space -- */
+  --color-void:       #00050d;
+  --color-navy:       #021025;
+  --color-navy-light: #052652;
+  --color-border:     rgba(0, 243, 255, 0.2);
+
+  /* -- Accents -- */
+  --color-cyan-dim:    #00acc1;
+  --color-cyan:        #00bcd4;
+  --color-cyan-bright: #00f3ff;
+  --color-accent-alt:  #ffb300; 
+
+  /* -- Text -- */
+  --color-text-main:   #e0f7fa;
+  --color-text-muted:  #819ca9;
+
+  /* -- Typography -- */
+  --font-display: 'Michroma', sans-serif;
+  --font-mono:    'Fira Code', monospace;
+  --font-body:    'Inter', sans-serif;
+
+  /* -- Effects -- */
+  --glow-subtle: 0 0 10px rgba(0, 243, 255, 0.1);
+  --glow-text:   0 0 5px rgba(0, 243, 255, 0.4);
+  --glass-panel: rgba(2, 16, 37, 0.7);
+  --ease-tech:   cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.icon {
-  height: 2rem;
-  width: 2rem;
+/* -- Reset & Base -- */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: var(--color-void);
+  color: var(--color-text-main);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  /* Subtle dark grid background */
+  background-image: 
+    linear-gradient(rgba(0, 243, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* -- Typography -- */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-cyan);
+  margin-top: 0;
+}
+
+h1 { font-size: 2.5rem; text-shadow: var(--glow-text); margin-bottom: 0.5rem; }
+h2 { font-size: 1.5rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
+h4 { font-size: 1.1rem; color: var(--color-cyan-bright); margin-bottom: 1rem; }
+p { color: var(--color-text-muted); max-width: 65ch; }
+
+a {
+  color: var(--color-cyan);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+a:hover {
+  color: var(--color-cyan-bright);
+  text-shadow: var(--glow-text);
+  letter-spacing: 0.05em;
+}
+
+/* -- Layout Components -- */
+
+/* 1. Header / Identity Block */
+header {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border);
+  background: radial-gradient(circle at top right, rgba(0,243,255,0.05), transparent 60%);
+}
+
+.identity-block h1 { margin: 0; }
+.identity-block .role {
+  font-family: var(--font-mono);
+  color: var(--color-accent-alt);
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* 2. Navigation (The HUD) */
+.hud-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(0, 5, 13, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+  padding: 0.75rem 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* Nav Toggle (Hamburger) */
+.nav-toggle {
+    display: none; /* Desktop hidden */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    z-index: 1001;
+}
+.nav-toggle .bar {
+    height: 3px;
+    width: 100%;
+    background-color: var(--color-cyan);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.nav-link {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--color-cyan-bright);
+}
+
+/* Dropdown Menu */
+.has-dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: -1rem;
+    background: var(--color-navy);
+    border: 1px solid var(--color-border);
+    min-width: 220px;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    box-shadow: var(--glow-subtle);
+    padding: 0.5rem 0;
+    z-index: 1002;
+    /* Removed margin-top to fix hover gap issue, added padding to invisible pseudo-element if needed, 
+       but direct contact is better. */
+    margin-top: 0; 
+}
+
+/* Invisible bridge for hover */
+.has-dropdown::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Extend hit area downwards */
+    left: 0;
+    width: 100%;
+    height: 10px;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    font-family: var(--font-mono);
+    border-bottom: 1px solid rgba(0,243,255,0.05);
+}
+
+.dropdown-menu a:hover {
+    background: rgba(0,243,255,0.1);
+    color: var(--color-cyan-bright);
+    padding-left: 1.75rem; /* Slide effect */
+}
+
+/* Desktop Hover Logic */
+@media (min-width: 769px) {
+    .has-dropdown:hover .dropdown-menu {
+        display: flex;
+        animation: fadeIn 0.2s ease;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  background: rgba(0,0,0,0.3);
+  padding: 0.25rem 0.5rem;
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  color: var(--color-cyan);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  width: 150px;
+}
+.search-input:focus { outline: none; }
+.search-btn {
+  background: transparent;
+  border: none;
+  color: var(--color-cyan-dim);
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+.search-btn:hover { color: var(--color-cyan-bright); }
+
+
+/* 3. Main Dashboard Grid */
+.main-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+/* -- Overview Section -- */
+.overview-section {
+    margin-bottom: 2rem;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.identity-panel .role {
+  font-family: var(--font-mono);
+  color: var(--color-accent-alt);
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.identity-panel h1 { margin: 0; font-size: 2.2rem; }
+
+/* -- Mobile & Responsive -- */
+@media (min-width: 769px) {
+    .mobile-only { display: none !important; }
+}
+
+@media (max-width: 768px) {
+    .search-box { display: none; } /* Hide search on mobile if not critical, or move */
+    
+    .nav-toggle { display: flex; margin-right: 0.5rem; }
+    
+    .nav-container {
+        padding: 0 1rem; /* Reduce padding for small screens */
+    }
+
+    .nav-brand span {
+        font-size: 0.9rem; /* Smaller text for brand */
+        /* Optional: truncate if still too long */
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100vw;
+        position: absolute;
+        top: 100%;
+        left: 0; /* Align with viewport, parent has relative position but we want full width */
+        /* Fix for the parent padding: we need to negative margin or calc content */
+        /* Actually, simpler to just set left: 0 and width: 100% relative to viewport implies fixed/absolute to body, 
+           but here it is absolute to nav-container. 
+           nav-container has padding. Let's make nav-links ignore container width.
+        */
+        left: -1rem; /* Compensate for container padding-left */
+        width: calc(100% + 2rem); /* Compensate for container padding both sides */
+        
+        padding: 1rem 0;
+        background: var(--color-navy);
+        border-bottom: 1px solid var(--color-cyan);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.8);
+    }
+    
+    .nav-links.active { display: flex; }
+    
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-link {
+        justify-content: center;
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+
+    /* Mobile Dropdown */
+    .has-dropdown .dropdown-menu {
+        position: static;
+        display: none;
+        width: 100%;
+        background: rgba(0,0,0,0.3);
+        border: none;
+        box-shadow: none;
+        text-align: center;
+        padding: 0;
+    }
+    .has-dropdown.open .dropdown-menu {
+        display: flex;
+    }
+    .has-dropdown.open .nav-link {
+        color: var(--color-accent-alt);
+    }
+    .dropdown-menu a {
+        padding: 1rem;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* Layout Responsive */
+    .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .identity-panel {
+        text-align: center;
+    }
+    .identity-panel > div {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .desktop-contact { display: none !important; }
+    .mobile-only { display: block !important; }
+    
+    /* Ensure main padding doesn't break horizontal flow */
+    .main-wrapper {
+        padding: 2rem 1rem;
+    }
+}
+
+.dashboard-section {
+  margin-bottom: 3rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  /* Auto-fit for responsive card layout */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.bio-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+}
+
+/* -- Tech Card (The wrapper for includes) -- */
+.tech-card {
+  background: var(--color-navy);
+  border: 1px solid var(--color-border);
+  padding: 2rem;
+  position: relative;
+  transition: transform 0.3s var(--ease-tech), box-shadow 0.3s var(--ease-tech);
+}
+
+.tech-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--glow-subtle);
+  border-color: var(--color-cyan);
+}
+
+/* Corner Decorations */
+.tech-card::before {
+  content: '';
+  position: absolute;
+  top: -1px; left: -1px;
+  width: 10px; height: 10px;
+  border-top: 2px solid var(--color-cyan);
+  border-left: 2px solid var(--color-cyan);
+}
+.tech-card::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; right: -1px;
+  width: 10px; height: 10px;
+  border-bottom: 2px solid var(--color-cyan);
+  border-right: 2px solid var(--color-cyan);
+}
+
+/* -- Compatibility Layer for Includes -- */
+/* Targeting elements inside the included HTML files */
+
+.tech-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tech-card li {
+  margin-bottom: 1.5rem;
+  border-left: 2px solid var(--color-navy-light);
+  padding-left: 1rem;
+  transition: border-color 0.2s;
+}
+
+.tech-card li:hover {
+  border-left-color: var(--color-cyan);
+}
+
+.tech-card h6 {
+  margin: 0 0 0.25rem 0;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+}
+
+/* Ensure inner headers look like card titles */
+.tech-card h4 {
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  width: 100%;
+}
+
+/* Force override common Bootstrap classes found in includes */
+.tech-card .text-muted { color: var(--color-text-muted) !important; font-size: 0.9rem; margin: 0; }
+.tech-card .link-primary { color: var(--color-cyan) !important; text-decoration: none; display:block; margin-bottom:4px; }
+.tech-card .col-lg-4, 
+.tech-card .col-md-auto, 
+.tech-card .col-sm-auto { 
+  width: 100% !important; 
+  max-width: 100% !important; 
+  padding: 0 !important; 
+}
+
+/* -- Footer -- */
+footer {
+  text-align: center;
+  padding: 3rem;
+  border-top: 1px solid var(--color-border);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  opacity: 0.7;
+}
+
+/* -- Utilities -- */
+.banner-img {
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid var(--color-cyan-dim);
+  filter: sepia(100%) hue-rotate(150deg) saturate(200%); /* Matrix/Cyberpunk filter */
+  opacity: 0.8;
+  border-radius: 50%; /* if avatar */
+}
+.banner-img.rectangular {
+    border-radius: 4px; /* classic banner */
 }
 
 .social {
-  height: 1.75rem;
-  width: 1.75rem;
-  margin-left: 1rem;
-  margin-top: 0;
-  padding-top: 0;
+    height: 2rem;
+    width: 2rem;
+    filter: invert(75%) sepia(35%) saturate(543%) hue-rotate(150deg) brightness(89%) contrast(85%); /* Matches --color-cyan-dim roughly */
+    transition: transform 0.2s, filter 0.2s;
+    margin-right: 0; /* logic handled by parent flex gap */
+}
+
+.social:hover {
+    transform: scale(1.1);
+    filter: invert(79%) sepia(59%) saturate(499%) hue-rotate(130deg) brightness(101%) contrast(101%); /* Matches --color-cyan-bright */
+}
+
+@media (max-width: 768px) {
+  header { grid-template-columns: 1fr; text-align: center; }
+  /* Identity block adjustments */
+  .identity-block { margin-top: 1rem; order: 2; }
+  .banner-img { 
+      margin-top: 0; 
+      order: 1;
+      border-radius: 50%; 
+      width: 150px; 
+      height: 150px; 
+      object-fit: cover;
+  }
 }
