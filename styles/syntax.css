@@ -1,0 +1,157 @@
+/* GitHub Dark Syntax Highlighting for Rouge (Jekyll) */
+
+/* Container */
+.highlight {
+  color: #c9d1d9;
+  background-color: #0d1117;
+}
+
+.highlight pre {
+  background-color: #0d1117;
+}
+
+/* Comments */
+.highlight .c,      /* Comment */
+.highlight .cd,     /* Comment.Doc */
+.highlight .cm,     /* Comment.Multiline */
+.highlight .c1,     /* Comment.Single */
+.highlight .cs,     /* Comment.Special */
+.highlight .ch {    /* Comment.Hashbang */
+  color: #8b949e;
+  font-style: italic;
+}
+
+/* Error */
+.highlight .err {
+  color: #f0f6fc;
+  background-color: #8e1519;
+}
+
+/* Escape */
+.highlight .esc {
+  color: #c9d1d9;
+}
+
+/* Generic strings */
+.highlight .gd {    /* Generic.Deleted */
+  color: #ffd7d5;
+  background-color: #67060c;
+}
+
+.highlight .gi {    /* Generic.Inserted */
+  color: #aff5b4;
+  background-color: #033a16;
+}
+
+/* Keywords */
+.highlight .k,      /* Keyword */
+.highlight .kd,     /* Keyword.Declaration */
+.highlight .kn,     /* Keyword.Namespace */
+.highlight .kp,     /* Keyword.Pseudo */
+.highlight .kr,     /* Keyword.Reserved */
+.highlight .kt,     /* Keyword.Type */
+.highlight .kv {    /* Keyword.Variable */
+  color: #ff7b72;
+}
+
+/* Operators, Punctuation */
+.highlight .o,      /* Operator */
+.highlight .ow,     /* Operator.Word */
+.highlight .p,      /* Punctuation */
+.highlight .pi {    /* Punctuation.Indicator */
+  color: #c9d1d9; /* frequent punctuation white/grey */
+}
+/* Some specific operators like 'new' often fall into Keywords, but mathematical operators usually white/blue */
+.highlight .o {
+  color: #ff7b72; /* GitHub uses red for = */
+}
+
+/* Names */
+.highlight .n,      /* Name */
+.highlight .nx {    /* Name.Other */
+  color: #c9d1d9;
+}
+
+.highlight .na,     /* Name.Attribute */
+.highlight .nb,     /* Name.Builtin */
+.highlight .bp,     /* Name.Builtin.Pseudo */
+.highlight .nc,     /* Name.Class */
+.highlight .no,     /* Name.Constant */
+.highlight .nd,     /* Name.Decorator */
+.highlight .ni,     /* Name.Entity */
+.highlight .ne,     /* Name.Exception */
+.highlight .nf,     /* Name.Function */
+.highlight .fm,     /* Name.Function.Magic */
+.highlight .nl,     /* Name.Label */
+.highlight .nn,     /* Name.Namespace */
+.highlight .nt,     /* Name.Tag */
+.highlight .nv,     /* Name.Variable */
+.highlight .vc,     /* Name.Variable.Class */
+.highlight .vg,     /* Name.Variable.Global */
+.highlight .vi,     /* Name.Variable.Instance */
+.highlight .vm {    /* Name.Variable.Magic */
+    color: #ed6c02;
+}
+
+/* Function calls */
+.highlight .nf, 
+.highlight .fm {
+  color: #d2a8ff;
+}
+
+/* Variables / Properties */
+.highlight .nv, 
+.highlight .vc, 
+.highlight .vg, 
+.highlight .vi {
+  color: #79c0ff;
+}
+
+/* Classes */
+.highlight .nc {
+  color: #f0883e; 
+}
+
+/* Entity/Tags */
+.highlight .nt {    /* HTML Tag */
+  color: #7ee787; 
+}
+.highlight .na {    /* HTML Attribute */
+  color: #79c0ff;
+}
+
+/* Literals (Numbers, etc) */
+.highlight .l,      /* Literal */
+.highlight .ld,     /* Literal.Date */
+.highlight .m,      /* Literal.Number */
+.highlight .mb,     /* Literal.Number.Bin */
+.highlight .mf,     /* Literal.Number.Float */
+.highlight .mh,     /* Literal.Number.Hex */
+.highlight .mi,     /* Literal.Number.Integer */
+.highlight .il,     /* Literal.Number.Integer.Long */
+.highlight .mo {    /* Literal.Number.Oct */
+  color: #79c0ff;
+}
+
+/* Strings */
+.highlight .s,      /* Literal.String */
+.highlight .sa,     /* Literal.String.Affix */
+.highlight .sb,     /* Literal.String.Backtick */
+.highlight .sc,     /* Literal.String.Char */
+.highlight .dl,     /* Literal.String.Delimiter */
+.highlight .sd,     /* Literal.String.Doc */
+.highlight .s2,     /* Literal.String.Double */
+.highlight .se,     /* Literal.String.Escape */
+.highlight .sh,     /* Literal.String.Heredoc */
+.highlight .si,     /* Literal.String.Interpol */
+.highlight .sx,     /* Literal.String.Other */
+.highlight .sr,     /* Literal.String.Regex */
+.highlight .s1,     /* Literal.String.Single */
+.highlight .ss {    /* Literal.String.Symbol */
+  color: #a5d6ff;
+}
+
+/* Regex */
+.highlight .sr {
+  color: #a5d6ff;
+}
