@@ -1,4 +1,12 @@
-*Posted 09/222025*
+---
+layout: post
+title: "Angular: Custom Multi-File Translation Loader for ngx-translate"
+date: 2025-09-22
+categories: [angular, localization, typescript, i18n]
+canonical_url: "https://dev.to/gramli/angular-custom-multi-file-translation-loader-for-ngx-translate-2lcd"
+---
+
+*Posted 09/22/2025*
 
 # Angular: Custom Multi-File Translation Loader for ngx-translate
 
