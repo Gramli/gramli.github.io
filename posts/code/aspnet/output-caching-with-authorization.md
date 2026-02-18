@@ -1,3 +1,12 @@
+---
+layout: post
+title: "Output Caching in ASP.NET Core Minimal APIs with Authorization - Complete Guide"
+date: 2025-07-25
+categories: [dotnet, minimapapis, webapi, caching, csharp]
+canonical_url: "https://dev.to/gramli/c-minimal-api-output-caching-2iij"
+description: "Learn how to implement output caching in ASP.NET Core Minimal APIs with authorization headers. Improve performance by caching server-side responses."
+---
+
 *Posted 07/25/2025*
 
 ## Minimal API: Output Caching

@@ -1,3 +1,11 @@
+---
+layout: post
+title: "C# Minimal API: Response Caching - Complete Guide with Examples"
+date: 2025-07-25
+categories: [dotnet, minimapapis, webapi, caching, csharp]
+canonical_url: "https://dev.to/gramli/c-minimal-api-response-caching-nmk"
+---
+
 *Posted 07/25/2025*
 
 ## Response Caching
