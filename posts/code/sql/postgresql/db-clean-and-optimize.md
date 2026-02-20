@@ -8,6 +8,7 @@ In PostgreSQL, the **VACUUM ANALYZE** command is used to optimize database perfo
 - **Purpose**: Removes dead tuples (rows that were deleted or updated but are still occupying space) from tables.
 - **Why Needed**: PostgreSQL uses Multi-Version Concurrency Control (MVCC), which keeps old versions of rows for transaction isolation. Over time, these old versions accumulate and need to be cleaned up.
 - **Effect**: Frees up space and prevents table bloat, ensuring efficient storage and performance.
+
 ### ANALYZE:
 - **Purpose**: Collects statistics about the contents of tables and indexes.
 - **Why Needed**: These statistics are used by the query planner to make decisions about the most efficient way to execute queries.

@@ -1,181 +1,291 @@
 ---
 title: Home
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Daniel Balcarek" />
-    <meta name="description" content="Technical programming journal and architectural archives." />
+    <meta
+      name="description"
+      content="Technical programming journal and architectural archives."
+    />
     <!-- Professional Title for Recruiters/SEO -->
     <title>Daniel Balcarek | Senior Software Engineer</title>
-   
+
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Inter:wght@300;400;600&family=Michroma&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Inter:wght@300;400;600&family=Michroma&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="styles/main.css" />
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   </head>
   <body>
-    
     <!-- HUD Navigation -->
     <nav class="hud-nav">
       <div class="nav-container">
         <div class="nav-brand">
-          <a href="#" style="display:flex; align-items:center; gap:0.5rem;">
-            <img src="assets/avatars.ico" class="icon" alt="System Icon" style="height:2rem; width:2rem; border-radius:50%; border:1px solid var(--color-cyan);">
-            <span style="font-family:var(--font-display); color:var(--color-text-main);">DANIEL_BALCAREK_SYS</span>
+          <a href="#" style="display: flex; align-items: center; gap: 0.5rem">
+            <img
+              src="assets/avatars.ico"
+              class="icon"
+              alt="System Icon"
+              style="
+                height: 2rem;
+                width: 2rem;
+                border-radius: 50%;
+                border: 1px solid var(--color-cyan);
+              "
+            />
+            <span
+              style="
+                font-family: var(--font-display);
+                color: var(--color-text-main);
+              "
+              >DANIEL_BALCAREK_SYS</span
+            >
           </a>
         </div>
 
         <!-- Hamburger Menu Button -->
         <button class="nav-toggle" aria-label="Toggle Navigation">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </button>
-        
+
         <ul class="nav-links">
-            <li><a href="#overview" class="nav-link">Overview</a></li>
-            <li class="nav-item has-dropdown">
-                <a href="#blog-sectors" class="nav-link">Blog <span style="font-size:0.7em">▼</span></a>
-                <div class="dropdown-menu">
-                    <a href="#sector-core">Backend Engineering</a>
-                    <a href="#sector-arch">Architecture & DevOps</a>
-                    <a href="#sector-web">Frontend Development</a>
-                    <a href="#sector-data">Data & Intelligence</a>
-                </div>
-            </li>
-            <li class="mobile-only"><a href="#comms" class="nav-link">Contact</a></li>
+          <li><a href="#overview" class="nav-link">Overview</a></li>
+          <li class="nav-item has-dropdown">
+            <a href="#blog-sectors" class="nav-link"
+              >Blog <span style="font-size: 0.7em">▼</span></a
+            >
+            <div class="dropdown-menu">
+              <a href="#sector-core">Backend Engineering</a>
+              <a href="#sector-arch">Architecture & DevOps</a>
+              <a href="#sector-web">Frontend Development</a>
+              <a href="#sector-data">Data & Intelligence</a>
+            </div>
+          </li>
+          <li class="mobile-only">
+            <a href="#comms" class="nav-link">Contact</a>
+          </li>
         </ul>
 
         <div class="search-box">
-          <input type="text" class="search-input" id="searchBar" placeholder="SEARCH_DATABASE...">
+          <input
+            type="text"
+            class="search-input"
+            id="searchBar"
+            placeholder="SEARCH_DATABASE..."
+          />
           <button class="search-btn" onclick="search()">[SCAN]</button>
         </div>
       </div>
     </nav>
 
     <main class="main-wrapper">
-      
       <!-- Overview Section -->
       <section id="overview" class="overview-section">
         <div class="overview-grid">
-            <!-- Identity / Short Bio -->
-            <div class="identity-panel">
-                <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem;">
-                     <img src="assets/banner2.jfif" alt="Avatar" class="avatar-large" style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover; border: 2px solid var(--color-cyan);">
-                     <div>
-                        <span class="role">:: SENIOR SOFTWARE ENGINEER ::</span>
-                        <h1>Daniel Balcarek</h1>
-                     </div>
-                </div>
-                <div class="bio-short">
-                    <p>
-                      System log for daily programming operations. 
-                      Straightforward technical directives. 
-                      Best practices. Troubleshooting logs.
-                    </p>
-                    <p style="margin-top:0.5rem; font-family:var(--font-mono); font-size:0.8rem; color:var(--color-cyan-dim);">
-                      STATUS: ONLINE // SYSTEM_VERSION: 2026.2
-                    </p>
-                </div>
+          <!-- Identity / Short Bio -->
+          <div class="identity-panel">
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                margin-bottom: 1rem;
+              "
+            >
+              <img
+                src="assets/banner2.jfif"
+                alt="Avatar"
+                class="avatar-large"
+                style="
+                  border-radius: 50%;
+                  width: 100px;
+                  height: 100px;
+                  object-fit: cover;
+                  border: 2px solid var(--color-cyan);
+                "
+              />
+              <div>
+                <span class="role">:: SENIOR SOFTWARE ENGINEER ::</span>
+                <h1>Daniel Balcarek</h1>
+              </div>
             </div>
+            <div class="bio-short">
+              <p>
+                System log for daily programming operations. Straightforward
+                technical directives. Best practices. Troubleshooting logs.
+              </p>
+              <p
+                style="
+                  margin-top: 0.5rem;
+                  font-family: var(--font-mono);
+                  font-size: 0.8rem;
+                  color: var(--color-cyan-dim);
+                "
+              >
+                STATUS: ONLINE // SYSTEM_VERSION: 2026.2
+              </p>
+            </div>
+          </div>
 
-            <!-- Long Bio / Portfolio Style -->
-            <div class="bio-panel tech-border" style="padding: 1.5rem; border: 1px solid var(--color-navy-light); background: rgba(10, 25, 47, 0.7);">
-                <h3 class="panel-header" style="color:var(--color-cyan); margin-bottom:1rem;">// OPERATOR_PROFILE</h3>
-                <p>
-                  Senior Software Engineer specializing in C# and .NET Core. 
-                  My evolution began with Windows desktop applications and has expanded into modern Angular/React web ecosystems.
-                </p>
-                <p style="margin-top:1rem;">
-                  I view software engineering as a craft. I am a code quality perfectionist, dedicated to clean architecture, 
-                  maintainable codebases, and pragmatic solutions. This system archives my technical findings and benchmarks.
-                </p>
-                
-                <!-- Contact moved here for Desktop view per requirements to be 'Overview' -->
-                <div class="desktop-contact" style="margin-top:1.5rem; display:flex; gap:2rem;">
-                    <a href="https://github.com/Gramli" target="_blank">
-                        <img src="assets/github-mark.svg" class="social" alt="Github">
-                    </a>
-                    <a href="https://dev.to/gramli" target="_blank">
-                        <img src="assets/dev-to.svg" class="social" alt="Dev.to">
-                    </a>
-                </div>
+          <!-- Long Bio / Portfolio Style -->
+          <div
+            class="bio-panel tech-border"
+            style="
+              padding: 1.5rem;
+              border: 1px solid var(--color-navy-light);
+              background: rgba(10, 25, 47, 0.7);
+            "
+          >
+            <h3
+              class="panel-header"
+              style="color: var(--color-cyan); margin-bottom: 1rem"
+            >
+              // OPERATOR_PROFILE
+            </h3>
+            <p>
+              Senior Software Engineer specializing in C# and .NET Core. My
+              evolution began with Windows desktop applications and has expanded
+              into modern Angular/React web ecosystems.
+            </p>
+            <p style="margin-top: 1rem">
+              I view software engineering as a craft. I am a code quality
+              perfectionist, dedicated to clean architecture, maintainable
+              codebases, and pragmatic solutions. This system archives my
+              technical findings and benchmarks.
+            </p>
+
+            <!-- Contact moved here for Desktop view per requirements to be 'Overview' -->
+            <div
+              class="desktop-contact"
+              style="margin-top: 1.5rem; display: flex; gap: 2rem"
+            >
+              <a href="https://github.com/Gramli" target="_blank">
+                <img src="assets/github-mark.svg" class="social" alt="Github" />
+              </a>
+              <a href="https://dev.to/gramli" target="_blank">
+                <img src="assets/dev-to.svg" class="social" alt="Dev.to" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/daniel-balcarek"
+                target="_blank"
+              >
+                <img src="assets/linkedin.svg" class="social" alt="LinkedIn" />
+              </a>
             </div>
+          </div>
         </div>
       </section>
 
-      <hr style="border-color:var(--color-navy-light); margin: 3rem 0;">
+      <hr style="border-color: var(--color-navy-light); margin: 3rem 0" />
 
       <!-- Blog Wrapper -->
       <div id="blog-sectors">
-          <!-- Sector 1: Core Technologies -->
-          <section id="sector-core" class="dashboard-section">
-            <h2>// 01. BACKEND ENGINEERING</h2>
-            <div class="dashboard-grid">
-                <div class="tech-card widget-style">{% include csharp.html %}</div>
-                <div class="tech-card widget-style">{% include asp-net.html %}</div>
-                <div class="tech-card widget-style">{% include benchmarks.html %}</div>
+        <!-- Sector 1: Core Technologies -->
+        <section id="sector-core" class="dashboard-section">
+          <h2>// 01. BACKEND ENGINEERING</h2>
+          <div class="dashboard-grid">
+            <div class="tech-card widget-style">{% include asp-net.html %}</div>
+            <div class="tech-card widget-style">{% include csharp.html %}</div>
+            <div class="tech-card widget-style">
+              {% include benchmarks.html %}
             </div>
-          </section>
+          </div>
+        </section>
 
-          <!-- Sector 2: Ops & Arch -->
-          <section id="sector-arch" class="dashboard-section">
-            <h2>// 02. ARCHITECTURE & DEVOPS</h2>
-            <div class="dashboard-grid">
-                <div class="tech-card widget-style">{% include git.html %}</div>
-                <div class="tech-card widget-style">{% include configuration.html %}</div>
-                <div class="tech-card widget-style">{% include architecture.html %}</div>
+        <!-- Sector 2: Ops & Arch -->
+        <section id="sector-arch" class="dashboard-section">
+          <h2>// 02. ARCHITECTURE & DEVOPS</h2>
+          <div class="dashboard-grid">
+            <div class="tech-card widget-style">
+              {% include architecture.html %}
             </div>
-          </section>
+            <div class="tech-card widget-style">{% include git.html %}</div>
+            <div class="tech-card widget-style">
+              {% include configuration.html %}
+            </div>
+          </div>
+        </section>
 
-          <!-- Sector 3: Frontend Grid -->
-          <section id="sector-web" class="dashboard-section">
-            <h2>// 03. FRONTEND DEVELOPMENT</h2>
-            <div class="dashboard-grid">
-                <div class="tech-card widget-style">{% include angular.html %}</div>
-                <div class="tech-card widget-style">{% include javascript.html %}</div>
-                <div class="tech-card widget-style">{% include typescript.html %}</div>
+        <!-- Sector 3: Frontend Grid -->
+        <section id="sector-web" class="dashboard-section">
+          <h2>// 03. FRONTEND DEVELOPMENT</h2>
+          <div class="dashboard-grid">
+            <div class="tech-card widget-style">{% include angular.html %}</div>
+            <div class="tech-card widget-style">
+              {% include javascript.html %}
             </div>
-          </section>
+            <div class="tech-card widget-style">
+              {% include typescript.html %}
+            </div>
+          </div>
+        </section>
 
-          <!-- Sector 4: Data & AI -->
-          <section id="sector-data" class="dashboard-section">
-            <h2>// 04. DATA & INTELLIGENCE</h2>
-            <div class="dashboard-grid">
-                <div class="tech-card widget-style">{% include sql.html %}</div>
-                <div class="tech-card widget-style">{% include ai.html %}</div>
-                <!-- Placeholder for balance -->
-                <div class="tech-card" style="opacity:0.5; display: flex; align-items:center; justify-content:center; border-style:dashed;">
-                    <span class="text-muted">[EMPTY_SLOT]</span>
-                </div>
+        <!-- Sector 4: Data & AI -->
+        <section id="sector-data" class="dashboard-section">
+          <h2>// 04. DATA & INTELLIGENCE</h2>
+          <div class="dashboard-grid">
+            <div class="tech-card widget-style">{% include sql.html %}</div>
+            <div class="tech-card widget-style">{% include ai.html %}</div>
+            <!-- Placeholder for balance -->
+            <div
+              class="tech-card"
+              style="
+                opacity: 0.5;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-style: dashed;
+              "
+            >
+              <span class="text-muted">[EMPTY_SLOT]</span>
             </div>
-          </section>
+          </div>
+        </section>
       </div>
 
       <!-- Mobile Contact Footer (hidden on desktop generally, but user asked for contact on bottom for mobile) -->
-      <section id="comms" class="mobile-only" style="margin-top: 4rem; text-align: center;">
-            <h2>// CONTACT CHANNELS</h2>
-            <div style="display:flex; align-items:center; justify-content:center; gap:2rem;">
-                <a href="https://github.com/Gramli" target="_blank">
-                    <img src="assets/github-mark.svg" class="social" alt="Github">
-                </a>
-                <a href="https://dev.to/gramli" target="_blank">
-                    <img src="assets/dev-to.svg" class="social" alt="Dev.to">
-                </a>
-            </div>
+      <section
+        id="comms"
+        class="mobile-only"
+        style="margin-top: 4rem; text-align: center"
+      >
+        <h2>// CONTACT CHANNELS</h2>
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+          "
+        >
+          <a href="https://github.com/Gramli" target="_blank">
+            <img src="assets/github-mark.svg" class="social" alt="Github" />
+          </a>
+          <a href="https://dev.to/gramli" target="_blank">
+            <img src="assets/dev-to.svg" class="social" alt="Dev.to" />
+          </a>
+          <a href="https://www.linkedin.com/in/daniel-balcarek" target="_blank">
+            <img src="assets/linkedin.svg" class="social" alt="LinkedIn" />
+          </a>
+        </div>
       </section>
-
     </main>
 
     <footer>
-      &copy; 2024 Daniel Balcarek. Powered by GitHub Pages. <br>
-      <span style="color:var(--color-cyan-dim)">TERMINAL_SESSION_END</span>
+      &copy; 2024 Daniel Balcarek. Powered by GitHub Pages. <br />
+      <span style="color: var(--color-cyan-dim)">TERMINAL_SESSION_END</span>
     </footer>
 
     <!-- Legacy Script for Search -->

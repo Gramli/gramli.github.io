@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var navLinks = document.querySelector('.nav-links');
     
     if (navToggle && navLinks) {
+        // Toggle menu
         navToggle.addEventListener('click', function(e) {
             e.stopPropagation(); // Prevent clicks from bubbling
             navLinks.classList.toggle('active');
@@ -25,6 +26,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 navLinks.classList.remove('active');
                 navToggle.classList.remove('active');
             }
+        });
+
+        // Close menu when a link is clicked
+        var menuLinks = document.querySelectorAll('.nav-links a');
+        menuLinks.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                // If it's the dropdown toggle in mobile, don't close yet (handled below)
+                if (window.innerWidth <= 768 && link.parentElement.classList.contains('has-dropdown')) {
+                    return;
+                }
+                
+                // Otherwise close the menu
+                navLinks.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
         });
     }
 
