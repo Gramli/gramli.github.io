@@ -13,7 +13,7 @@ canonical_url: "https://dev.to/gramli/nodejs-dependency-version-management-with-
 
 Working with multiple `Node.js` projects often means switching between different Node versions, reinstalling dependencies and remembering various `nvm` and `npm` commands. This becomes especially painful when moving between legacy and modern codebases.
 
-This article provides a practical overview of my most common `Node.js` workflow tasks: **switching Node versions** using `nvm`, **cleaning and reinstalling dependencies** and using the **correct npm installation strategy** for local development and CI/CD environments.
+This article provides a practical overview of my most common `Node.js` workflow tasks: **switching Node versions** using `nvm`, **cleaning and reinstalling dependencies** and using the **correct npm installation strategy** for local development and CI/CD environments, and **checking and updating dependencies** regularly.
 
 If you regularly jump between projects and forget the exact commands, this guide provides a simple, repeatable workflow you can reuse every day.
 
@@ -43,6 +43,10 @@ If you regularly jump between projects and forget the exact commands, this guide
     - [Log in to a registry](#log-in-to-a-registry)
     - [Set the default registry](#set-the-default-registry)
     - [Show current npm configuration](#show-current-npm-configuration)
+  - [Checking and Updating Dependencies](#checking-and-updating-dependencies)
+    - [Check outdated packages](#check-outdated-packages)
+    - [Update dependencies](#update-dependencies)
+    - [Recommended workflow](#recommended-workflow)
 
 ---
 
@@ -252,3 +256,47 @@ npm config list
 This shows configuration values from all scopes (global, user, and project).
 
 > **Note** Some projects define a registry inside a project-level .npmrc, which overrides global settings.
+
+## Checking and Updating Dependencies
+
+Even with deterministic installs (`npm ci`) and controlled Node.js versions (`nvm`), dependencies should be checked and updated regularly. npm provides simple commands for this.
+
+### Check outdated packages
+
+``` bash
+npm outdated
+```
+
+Example output:
+
+    Package   Current   Wanted   Latest
+    express   4.18.1    4.18.3   5.0.0
+
+-   **Current** — installed version
+-   **Wanted** — newest version allowed by `package.json` (safe update)
+-   **Latest** — newest published version (may contain breaking changes)
+
+### Update dependencies
+
+``` bash
+npm update
+```
+
+This updates packages **within the semver range** defined in `package.json`, applying patches and minor updates without upgrading to breaking major versions. It also regenerates `package-lock.json` to reflect the new resolved versions.
+
+Update a single package:
+
+``` bash
+npm update express
+```
+
+### Recommended workflow
+
+``` bash
+npm outdated
+npm update
+npm ci
+npm test
+```
+
+This keeps dependencies up to date while maintaining reproducible builds.
