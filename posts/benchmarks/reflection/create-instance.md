@@ -1,3 +1,11 @@
+---
+layout: post
+title: ".NET Reflection Performance: Create Instance Benchmarks (Part 3)"
+date: 2024-11-15
+categories: [dotnet, benchmark, performance, reflection, csharp]
+description: "Performance comparison of ServiceProvider, Activator.CreateInstance with concrete type, and Activator.CreateInstance via interface for creating class instances in .NET."
+---
+
 *Posted 11/15/2024*
 ## Create Instance of Class
 
