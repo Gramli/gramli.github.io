@@ -3,7 +3,7 @@ layout: post
 title: "Run OpenClaw Locally on Windows Using Windows Sandbox for Secure Isolation"
 date: 2026-04-21
 categories: [ai, openclaw, windows, sandbox, security]
-description: "How to run OpenClaw safely on a local Windows machine using Windows Sandbox for secure, isolated AI agent experimentation."
+description: "Part 1: How to run OpenClaw safely on a local Windows machine using Windows Sandbox for secure, isolated AI agent experimentation."
 canonical_url: "https://dev.to/gramli/run-openclaw-locally-on-windows-using-windows-sandbox-for-secure-isolation-411b"
 ---
 
