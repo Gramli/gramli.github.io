@@ -67,10 +67,10 @@ title: Home
               >Blog <span style="font-size: 0.7em">▼</span></a
             >
             <div class="dropdown-menu">
+              <a href="#sector-arch">Architecture & Intelligence</a>
               <a href="#sector-core">Backend Engineering</a>
-              <a href="#sector-arch">Architecture & DevOps</a>
               <a href="#sector-web">Frontend Development</a>
-              <a href="#sector-data">Data & Intelligence</a>
+              <a href="#sector-data">Data & DevOps</a>
             </div>
           </li>
           <li class="mobile-only">
@@ -192,28 +192,38 @@ title: Home
 
       <!-- Blog Wrapper -->
       <div id="blog-sectors">
-        <!-- Sector 1: Core Technologies -->
-        <section id="sector-core" class="dashboard-section">
-          <h2>// 01. BACKEND ENGINEERING</h2>
+        <!-- Sector 1: Arch & AI -->
+        <section id="sector-arch" class="dashboard-section">
+          <h2>// 01. ARCHITECTURE & INTELLIGENCE</h2>
           <div class="dashboard-grid">
-            <div class="tech-card widget-style">{% include asp-net.html %}</div>
-            <div class="tech-card widget-style">{% include csharp.html %}</div>
+            <div class="tech-card widget-style">
+              {% include architecture.html %}
+            </div>
+            <div class="tech-card widget-style">{% include ai.html %}</div>
             <div class="tech-card widget-style">
               {% include benchmarks.html %}
             </div>
           </div>
         </section>
 
-        <!-- Sector 2: Ops & Arch -->
-        <section id="sector-arch" class="dashboard-section">
-          <h2>// 02. ARCHITECTURE & DEVOPS</h2>
+        <!-- Sector 2: Core Technologies -->
+        <section id="sector-core" class="dashboard-section">
+          <h2>// 02. BACKEND ENGINEERING</h2>
           <div class="dashboard-grid">
-            <div class="tech-card widget-style">
-              {% include architecture.html %}
-            </div>
-            <div class="tech-card widget-style">{% include git.html %}</div>
-            <div class="tech-card widget-style">
-              {% include configuration.html %}
+            <div class="tech-card widget-style">{% include asp-net.html %}</div>
+            <div class="tech-card widget-style">{% include csharp.html %}</div>
+            <!-- Placeholder for balance -->
+            <div
+              class="tech-card"
+              style="
+                opacity: 0.5;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-style: dashed;
+              "
+            >
+              <span class="text-muted">[EMPTY_SLOT]</span>
             </div>
           </div>
         </section>
@@ -232,24 +242,14 @@ title: Home
           </div>
         </section>
 
-        <!-- Sector 4: Data & AI -->
+        <!-- Sector 4: Data & DevOps -->
         <section id="sector-data" class="dashboard-section">
-          <h2>// 04. DATA & INTELLIGENCE</h2>
+          <h2>// 04. DATA & DEVOPS</h2>
           <div class="dashboard-grid">
             <div class="tech-card widget-style">{% include sql.html %}</div>
-            <div class="tech-card widget-style">{% include ai.html %}</div>
-            <!-- Placeholder for balance -->
-            <div
-              class="tech-card"
-              style="
-                opacity: 0.5;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-style: dashed;
-              "
-            >
-              <span class="text-muted">[EMPTY_SLOT]</span>
+            <div class="tech-card widget-style">{% include git.html %}</div>
+            <div class="tech-card widget-style">
+              {% include configuration.html %}
             </div>
           </div>
         </section>
