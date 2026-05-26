@@ -245,7 +245,7 @@ To improve result consistency, I will run each prompt four times for every model
 
 **REST API explanation**
 
-{% details Click to expand REST API explanation %}
+<details><summary>Click to expand REST API explanation</summary>
 
 ```PowerShell
 A REST API (Representational State Transfer) is an architectural style that defines a set of rules for how
@@ -255,11 +255,11 @@ identified by unique URLs. Communication between the client and the server is ty
 methods—such as GET (to retrieve data), POST (to submit new data), PUT (to update data), and DELETE (to remove
 data)—making the communication efficient, scalable, and stateless.
 ```
-{% enddetails %}
+</details>
 
 **Docker summary** 
 
-{% details Click to expand Docker summary %}
+<details><summary>Click to expand Docker summary</summary>
 
 ```PowerShell
 Docker is a platform that uses containerization technology to package applications and all their dependencies into
@@ -268,13 +268,13 @@ predictably across any computing environment, solving the common problem of envi
 portability makes deploying and scaling applications significantly easier and more efficient across development
 and production systems.
 ```
-{% enddetails %}
+</details>
 
 #### 4B Outputs
 
 **REST API explanation**
 
-{% details Click to expand REST API explanation %}
+<details><summary>Click to expand REST API explanation</summary>
 
 ```PowerShell
 A REST API (Representational State Transfer Application Programming Interface) is essentially a set of rules and
@@ -288,11 +288,11 @@ application, regardless of its underlying language, can reliably and efficiently
 any server.
 ```
 
-{% enddetails %}
+</details>
 
 **Docker summary**
 
-{% details Click to expand Docker summary %}
+<details><summary>Click to expand Docker summary</summary>
 
 ```PowerShell
 Docker is a platform that enables developers to containerize applications, bundling the code, runtime, libraries,
@@ -303,7 +303,7 @@ immensely reliable and efficient, allowing developers to quickly build, test, an
 machine or cloud environment.
 ```
 
-{% enddetails %}
+</details>
 
 #### Results
 
@@ -334,7 +334,7 @@ Reasoning performance was evaluated using simple logic and multi-step problem-so
 
 **Logic puzzle**
 
-{% details Click to expand Logic puzzle %}
+<details><summary>Click to expand Logic puzzle</summary>
 
 ```PowerShell
 This is a classic distance, rate, and time problem. We need to find the one-way distance first and then double it
@@ -394,11 +394,11 @@ $$\text{Total Distance} = 360 \text{ km}$$
 The total distance traveled is **360 km**.
 ```
 
-{% enddetails %}
+</details>
 
 **Trip budget check**
 
-{% details Click to expand Trip budget check %}
+<details><summary>Click to expand Trip budget check</summary>
 
 ```PowerShell
 This is how to calculate the remaining money:
@@ -435,13 +435,13 @@ This is how to calculate the remaining money:
 **Answer:** You have **€84** left for activities and shopping.
 ```
 
-{% enddetails %}
+</details>
 
 #### 4B Outputs
 
 **Logic puzzle**
 
-{% details Click to expand Logic puzzle %}
+<details><summary>Click to expand Logic puzzle</summary>
 
 ```PowerShell
 This problem requires using the relationship $\text{Time} = \frac{\text{Distance}}{\text{Rate}}$ and setting up an
@@ -508,11 +508,11 @@ The total distance traveled is **360 km**.
 given information.)
 ```
 
-{% enddetails %}
+</details>
 
 **Trip budget check**
 
-{% details Click to expand Trip budget check %}
+<details><summary>Click to expand Trip budget check</summary>
 
 ```PowerShell
 This is a calculation of all fixed expenses to determine the remaining balance for discretionary spending.
@@ -541,7 +541,7 @@ $$€450 - €366 = €84$$
 **Answer:** You will have **€84** left for activities and shopping.
 ```
 
-{% enddetails %}
+</details>
 
 #### Results
 
@@ -572,7 +572,7 @@ The trip-planning task combines factual geographic knowledge with contextual rec
 
 **Geographic knowledge**
 
-{% details Click to expand Geographic knowledge %}
+<details><summary>Click to expand Geographic knowledge</summary>
 
 ```PowerShell
 The approximate GPS coordinates for Brno, Czech Republic are:
@@ -581,11 +581,11 @@ The approximate GPS coordinates for Brno, Czech Republic are:
 **Longitude:** 16.5035° E
 ```
 
-{% enddetails %}
+</details>
 
 **Trip planning**
 
-{% details Click to expand Trip planning %}
+<details><summary>Click to expand Trip planning</summary>
 
 ```PowerShell
 Based on your starting point in Olomouc, and the constraints (3 hours travel, family-friendly, 3 days in May), I suggest:
@@ -613,13 +613,13 @@ If you prefer a slightly closer, more urban, and easily walkable trip, **Bratisl
 *   **Cons:** Less focus on wide-open Alpine nature compared to the Austrian option.
 ```
 
-{% enddetails %}
+</details>
 
 #### 4B Outputs
 
 **Geographic knowledge**
 
-{% details Click to expand Geographic knowledge %}
+<details><summary>Click to expand Geographic knowledge</summary>
 
 ```PowerShell
 The approximate coordinates for Brno (the main city center) in the Czech Republic are:
@@ -631,11 +631,11 @@ The approximate coordinates for Brno (the main city center) in the Czech Republi
 for the general urban center.)*
 ```
 
-{% enddetails %}
+</details>
 
 **Trip planning**
 
-{% details Click to expand Trip planning %}
+<details><summary>Click to expand Trip planning</summary>
 
 ```PowerShell
 The best family-friendly destination for a 3-day trip from Olomouc in May, while staying within the 3-hour driving
@@ -669,7 +669,7 @@ has unique markets and atmosphere).
 border crossing.
 ```
 
-{% enddetails %}
+</details>
 
 #### Results
 
@@ -703,7 +703,7 @@ Code generation was evaluated using practical C# and .NET-focused tasks. The foc
 
 **C# string reverse**
 
-{% details Click to expand C# string reverse %}
+<details><summary>Click to expand C# string reverse</summary>
 
 ```csharp
 Here is the C# code for a static method that reverses a string, using the `StringBuilder` class for efficient
@@ -755,11 +755,11 @@ public class Program
 }
 ```
 
-{% enddetails %}
+</details>
 
 **LINQ filtering**
 
-{% details Click to expand LINQ filtering %}
+<details><summary>Click to expand LINQ filtering</summary>
 
 ```csharp
 Since LINQ queries depend on the specific data structure (class/collection) you are using, here is the generic
@@ -830,13 +830,13 @@ be included in the result.
 `List<Destination>`.
 ```
 
-{% enddetails %}
+</details>
 
 #### 4B Outputs
 
 **C# string reverse**
 
-{% details Click to expand C# string reverse %}
+<details><summary>Click to expand C# string reverse</summary>
 
 ```csharp
 This is a classic programming problem. In C#, because strings are **immutable** (they cannot be changed after
@@ -936,11 +936,11 @@ approach**. It is the shortest and most idiomatic way to express "reverse this."
 **Array/StringBuilder approach**.
 ```
 
-{% enddetails %}
+</details>
 
 **LINQ filtering**
 
-{% details Click to expand LINQ filtering %}
+<details><summary>Click to expand LINQ filtering</summary>
 
 ```csharp
 This requires three parts: defining a data structure (a class), setting up some sample data, and then executing
@@ -1050,7 +1050,7 @@ price was set correctly.
 both criteria.*
 ```
 
-{% enddetails %}
+</details>
 
 #### Results
 
@@ -1082,7 +1082,7 @@ Structured output reliability was evaluated using strict JSON generation tasks. 
 
 **Book list JSON**
 
-{% details Click to expand Book list JSON %}
+<details><summary>Click to expand Book list JSON</summary>
 
 ```json
 [
@@ -1104,11 +1104,11 @@ Structured output reliability was evaluated using strict JSON generation tasks. 
 ]
 ```
 
-{% enddetails %}
+</details>
 
 **User object**
 
-{% details Click to expand User object %}
+<details><summary>Click to expand User object</summary>
 
 ```json
 {
@@ -1118,13 +1118,13 @@ Structured output reliability was evaluated using strict JSON generation tasks. 
 }
 ```
 
-{% enddetails %}
+</details>
 
 #### 4B Outputs
 
 **Book list JSON**
 
-{% details Click to expand Book list JSON %}
+<details><summary>Click to expand Book list JSON</summary>
 
 ```json
 [
@@ -1146,11 +1146,11 @@ Structured output reliability was evaluated using strict JSON generation tasks. 
 ]
 ```
 
-{% enddetails %}
+</details>
 
 **User object**
 
-{% details Click to expand User object %}
+<details><summary>Click to expand User object</summary>
 
 ```json
 {
@@ -1177,7 +1177,7 @@ If you prefer a flat structure without nesting:
 }
 ```
 
-{% enddetails %}
+</details>
 
 #### Results
 
@@ -1209,18 +1209,18 @@ Instruction following was evaluated using constraint-based prompts. The focus is
 
 **Word limit**
 
-{% details Click to expand Word limit %}
+<details><summary>Click to expand Word limit</summary>
 
 ```Powershell
 Prague, the capital of the Czech Republic, is a stunning historic city known for its beautiful architecture,
 bridges, and rich cultural history.
 ```
 
-{% enddetails %}
+</details>
 
 **Language constraint**
 
-{% details Click to expand Language constraint %}
+<details><summary>Click to expand Language constraint</summary>
 
 ```Powershell
 **REST API** je architektonický styl, který se používá pro navrhování síťových aplikací, které umožňují různým
@@ -1229,24 +1229,24 @@ požadavku a výměně dat z tzv. zdrojů (resources). Jedná se tedy o způsob,
 škálovatelně sdílet informace přes internet.
 ```
 
-{% enddetails %}
+</details>
 
 #### 4B Outputs
 
 **Word limit**
 
-{% details Click to expand Word limit %}
+<details><summary>Click to expand Word limit</summary>
 
 ```Powershell
 Prague, the historic Czech capital, blends medieval charm with modern life. Its stunning Charles Bridge and Gothic
 architecture create a vibrant, fairytale atmosphere.
 ```
 
-{% enddetails %}
+</details>
 
 **Language constraint**
 
-{% details Click to expand Language constraint %}
+<details><summary>Click to expand Language constraint</summary>
 
 ```Powershell
 REST (Representational State Transfer) je architektonický styl pro návrh API (Application Programming Interface).
@@ -1274,7 +1274,7 @@ bez nutnosti kontextu.
 zasoby, což vede k vysoce škálovatelným a spolehlivým webovým službám.
 ```
 
-{% enddetails %}
+</details>
 
 #### Results
 

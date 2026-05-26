@@ -462,7 +462,7 @@ Tested prompts are included below.
 
 **Intention prompt**
 
-{% details Click to expand Intention prompt %}
+<details><summary>Click to expand Intention prompt</summary>
 
 ```plaintext
 You are a trip intent extractor. Analyze the user message and return ONLY a valid JSON object — no markdown, no explanation, no code fences.
@@ -490,11 +490,11 @@ Return exactly this JSON structure:
 User message: Plan a family day in Prague next Saturday with kids who love museums
 ```
 
-{% enddetails %}
+</details>
 
 **Activity prompt**
 
-{% details Click to expand Activity prompt %}
+<details><summary>Click to expand Activity prompt</summary>
 
 ```plaintext
 You are a family trip activity advisor. Based on the weather forecast below, decide whether the trip day is better suited for INDOOR activities, OUTDOOR activities, or BOTH.
@@ -509,11 +509,11 @@ Forecast:
   - Date: 2026-05-22, Temp: 12.9°C–16.5°C (avg 14.4°C), Clouds: 70%, Wind: 4.4 m/s
 ```
 
-{% enddetails %}
+</details>
 
 **Plan prompt**
 
-{% details Click to expand Plan prompt %}
+<details><summary>Click to expand Plan prompt</summary>
 
 ```plaintext
 You are a family trip planner. Your job is to select the best places from the provided lists and write a short plan summary.
@@ -582,7 +582,7 @@ json
 
 ```
 
-{% enddetails %}
+</details>
 
 The results from the intention and activity prompts were consistently correct during testing. Looking at the performance numbers, the intention prompt achieved an average generation speed of 9.64 tokens/s, while the activity prompt reached 12.65 tokens/s. This difference is expected because the activity prompt is simpler and returns only a single-word response.
 
