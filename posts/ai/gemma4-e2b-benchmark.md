@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Old PC vs New AI: Can a 2015 Desktop Actually Run Gemma 4? (2B vs 4B Benchmark)"
 date: 2026-05-14
 categories: [ai, gemma, ollama, benchmark, local-ai]
 description: "Benchmarking Gemma 4 E2B and E4B models running locally with Ollama on a 2015 desktop — speed, reasoning, code generation, structured output, and instruction following."
 canonical_url: "https://dev.to/gramli/old-pc-vs-new-ai-can-a-2015-desktop-actually-run-gemma-4-2b-vs-4b-benchmark-2eg6"
 ---
+
+# Old PC vs New AI: Can a 2015 Desktop Actually Run Gemma 4? (2B vs 4B Benchmark)
 
 Running modern AI models locally on older hardware sounds almost impossible. But with smaller models like Gemma 4 and tools like Ollama, local AI is starting to become surprisingly accessible even on aging machines.
 
@@ -19,36 +20,37 @@ So, let’s dive in.
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
-- [Choosing right Gemma 4 Variation](#choosing-right-gemma-4-variation)
-  - [Basic Gemma 4 Knowledge](#basic-gemma-4-knowledge)
-- [Installing and Running Gemma 4](#installing-and-running-gemma-4)
-    - [Prompts](#prompts)
-    - [2B Outputs](#2b-outputs)
-    - [4B Outputs](#4b-outputs)
-    - [Results](#results)
-  - [Reasoning Benchmark](#reasoning-benchmark)
-    - [2B Outputs](#2b-outputs-1)
-    - [4B Outputs](#4b-outputs-1)
-    - [Results](#results-1)
-  - [Knowledge Benchmark](#knowledge-benchmark)
-    - [2B Outputs](#2b-outputs-2)
-    - [4B Outputs](#4b-outputs-2)
-    - [Results](#results-2)
-  - [Code Generation](#code-generation)
-    - [2B Outputs](#2b-outputs-3)
-    - [4B Outputs](#4b-outputs-3)
-    - [Results](#results-3)
-  - [Structured Output (JSON)](#structured-output-json)
-    - [2B Outputs](#2b-outputs-4)
-    - [4B Outputs](#4b-outputs-4)
-    - [Results](#results-4)
-  - [Instruction Following](#instruction-following)
-    - [2B Outputs](#2b-outputs-5)
-    - [4B Outputs](#4b-outputs-5)
-    - [Results](#results-5)
-  - [System Metrics](#system-metrics)
-- [Summary](#summary)
+- [Old PC vs New AI: Can a 2015 Desktop Actually Run Gemma 4? (2B vs 4B Benchmark)](#old-pc-vs-new-ai-can-a-2015-desktop-actually-run-gemma-4-2b-vs-4b-benchmark)
+  - [Table of Contents](#table-of-contents)
+  - [Choosing right Gemma 4 Variation](#choosing-right-gemma-4-variation)
+    - [Basic Gemma 4 Knowledge](#basic-gemma-4-knowledge)
+  - [Installing and Running Gemma 4](#installing-and-running-gemma-4)
+      - [Prompts](#prompts)
+      - [2B Outputs](#2b-outputs)
+      - [4B Outputs](#4b-outputs)
+      - [Results](#results)
+    - [Reasoning Benchmark](#reasoning-benchmark)
+      - [2B Outputs](#2b-outputs-1)
+      - [4B Outputs](#4b-outputs-1)
+      - [Results](#results-1)
+    - [Knowledge Benchmark](#knowledge-benchmark)
+      - [2B Outputs](#2b-outputs-2)
+      - [4B Outputs](#4b-outputs-2)
+      - [Results](#results-2)
+    - [Code Generation](#code-generation)
+      - [2B Outputs](#2b-outputs-3)
+      - [4B Outputs](#4b-outputs-3)
+      - [Results](#results-3)
+    - [Structured Output (JSON)](#structured-output-json)
+      - [2B Outputs](#2b-outputs-4)
+      - [4B Outputs](#4b-outputs-4)
+      - [Results](#results-4)
+    - [Instruction Following](#instruction-following)
+      - [2B Outputs](#2b-outputs-5)
+      - [4B Outputs](#4b-outputs-5)
+      - [Results](#results-5)
+    - [System Metrics](#system-metrics)
+  - [Summary](#summary)
 
 ## Choosing right Gemma 4 Variation
 

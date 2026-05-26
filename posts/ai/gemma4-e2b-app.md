@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "How to Use Gemma 4 E2B the Smart Way: Family Trip Advisor"
 date: 2026-05-22
 categories: [ai, gemma, ollama, aspnet, angular, local-ai]
 description: "Building a Family Trip Advisor app with Gemma 4 E2B, ASP.NET backend, and Angular frontend — how smart prompt design and backend orchestration unlock reliable results from small LLMs."
 canonical_url: "https://dev.to/gramli/old-pc-vs-new-ai-can-a-2015-desktop-actually-run-gemma-4-2b-vs-4b-benchmark-2eg6"
 ---
+
+# How to Use Gemma 4 E2B the Smart Way: Family Trip Advisor
 
 In a [previous article](https://dev.to/gramli/old-pc-vs-new-ai-can-a-2015-desktop-actually-run-gemma-4-2b-vs-4b-benchmark-2eg6#benchmarks), I benchmarked the Gemma 4 E2B and E4B models to see whether they are actually usable on my old 2015 PC, using specific prompt benchmarks for trip planning.
 
@@ -17,20 +18,21 @@ First, we will look at the application itself. Then we will go through the archi
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
-- [What I Built](#what-i-built)
-- [Demo](#demo)
-- [Code](#code)
-  - [Backend](#backend)
-  - [Frontend](#frontend)
-- [How I Used Gemma 4](#how-i-used-gemma-4)
-  - [Backend Orchestration](#backend-orchestration)
-  - [Algorithm pseudocode](#algorithm-pseudocode)
-  - [Validation and Resilience](#validation-and-resilience)
-  - [Benchmark](#benchmark)
-- [MVP Scope and Next Steps](#mvp-scope-and-next-steps)
-  - [Known Limitations](#known-limitations)
-- [Summary](#summary)
+- [How to Use Gemma 4 E2B the Smart Way: Family Trip Advisor](#how-to-use-gemma-4-e2b-the-smart-way-family-trip-advisor)
+  - [Table of Contents](#table-of-contents)
+  - [What I Built](#what-i-built)
+  - [Demo](#demo)
+  - [Code](#code)
+    - [Backend](#backend)
+    - [Frontend](#frontend)
+  - [How I Used Gemma 4](#how-i-used-gemma-4)
+    - [Backend Orchestration](#backend-orchestration)
+    - [Algorithm pseudocode](#algorithm-pseudocode)
+    - [Validation and Resilience](#validation-and-resilience)
+    - [Benchmark](#benchmark)
+  - [MVP Scope and Next Steps](#mvp-scope-and-next-steps)
+    - [Known Limitations](#known-limitations)
+  - [Summary](#summary)
 
 ## What I Built
 
