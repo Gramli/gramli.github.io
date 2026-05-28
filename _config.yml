@@ -1,0 +1,50 @@
+title: "Daniel Balcarek | Senior Software Engineer"
+description: "ASP.NET Core and Angular engineer. Building practical applications with local LLMs — real benchmarks, real code, real architecture decisions."
+url: "https://gramli.github.io"
+baseurl: ""
+
+author:
+  name: "Daniel Balcarek"
+  email: ""
+
+lang: en-US
+
+# Social links (used by jekyll-seo-tag for Twitter/OG cards)
+twitter:
+  username: ""
+
+github_username: Gramli
+
+# Default OG/SEO image (shown when an article has no image: front matter)
+# logo: /assets/avatars.ico
+
+# Jekyll plugins supported by GitHub Pages
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Collections — all posts live under posts/ (not the standard _posts/)
+collections:
+  posts:
+    output: true
+    permalink: /posts/:path/
+
+# Exclude dev files from the build
+exclude:
+  - test-design.html
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+# Feed settings (jekyll-feed)
+feed:
+  path: feed.xml
+
+# Defaults so every page in posts/ gets layout: post automatically
+defaults:
+  - scope:
+      path: "posts"
+      type: "posts"
+    values:
+      layout: "post"

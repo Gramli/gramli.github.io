@@ -1,9 +1,12 @@
 ---
 layout: post
+title: "Old PC vs New AI: Can a 2015 Desktop Actually Run Gemma 4? (2B vs 4B Benchmark)"
 date: 2026-05-14
 categories: [ai, gemma, ollama, benchmark, local-ai]
 description: "Benchmarking Gemma 4 E2B and E4B models running locally with Ollama on a 2015 desktop — speed, reasoning, code generation, structured output, and instruction following."
 canonical_url: "https://dev.to/gramli/old-pc-vs-new-ai-can-a-2015-desktop-actually-run-gemma-4-2b-vs-4b-benchmark-2eg6"
+series: gemma4
+series_part: 1
 ---
 
 # Old PC vs New AI: Can a 2015 Desktop Actually Run Gemma 4? (2B vs 4B Benchmark)

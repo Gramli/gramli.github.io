@@ -3,6 +3,7 @@ layout: post
 title: "Clean Unit Testing in .NET: Practical xUnit and Moq Tips"
 date: 2026-03-31
 categories: [dotnet, csharp, unittest, xunit, moq, testing]
+description: "Practical xUnit and Moq patterns for cleaner, maintainable .NET unit tests: better mocking, test organization, and avoiding common pitfalls."
 canonical_url: "https://dev.to/gramli/clean-unit-testing-in-net-practical-xunit-and-moq-tips-5bki"
 ---
 

@@ -4,13 +4,13 @@
     <li>
       <h6>
         <a
-          href="https://gramli.github.io/posts/code/aspnet/unit-tests-tips-and-tricks"
+          href="https://gramli.github.io/posts/code/aspnet/minimal-api-keep-endpoints-clean"
           class="link-primary"
-          >Clean Unit Testing in .NET: Practical xUnit and Moq Tips</a
+          >C# Minimal API: A Practical Way to Keep Endpoints Clean</a
         >
       </h6>
       <p class="text-muted">
-        Practical xUnit and Moq tips for cleaner, maintainable .NET unit tests.
+        How to keep Minimal API endpoints clean and maintainable using extension methods and RouteGroupBuilder.
       </p>
     </li>
     <li>
@@ -18,50 +18,23 @@
         <a
           href="https://gramli.github.io/posts/code/aspnet/minimal-api-multiple-auth-schemes"
           class="link-primary"
-          >C# Minimal API: Multiple Authentication Schemes with Swagger
-          Support</a
+          >C# Minimal API: Multiple Authentication Schemes with Swagger</a
         >
       </h6>
       <p class="text-muted">
-        How to configure multiple authentication schemes (JWT, Basic) in a
-        Minimal API with Swagger support.
+        How to configure JWT and Basic Auth in a Minimal API with working Swagger UI support for each scheme.
       </p>
     </li>
     <li>
       <h6>
         <a
-          href="https://gramli.github.io/posts/code/aspnet/response-caching-minimal-api"
+          href="https://gramli.github.io/posts/code/aspnet/unit-tests-tips-and-tricks"
           class="link-primary"
-          >Response Caching</a
+          >Clean Unit Testing in .NET: Practical xUnit and Moq Tips</a
         >
       </h6>
       <p class="text-muted">
-        Client-side caching headers in ASP.NET Core Minimal APIs.
-      </p>
-    </li>
-    <li>
-      <h6>
-        <a
-          href="https://gramli.github.io/posts/code/aspnet/output-caching-with-authorization"
-          class="link-primary"
-          >Output Caching</a
-        >
-      </h6>
-      <p class="text-muted">
-        Output caching in ASP.NET, Custom Output Caching Policy for
-        authorization header, Minimal API
-      </p>
-    </li>
-    <li>
-      <h6>
-        <a
-          href="https://gramli.github.io/posts/code/aspnet/aspnet-web-api-caching-strategies"
-          class="link-primary"
-          >ASP.NET Caching Strategies</a
-        >
-      </h6>
-      <p class="text-muted">
-        Overview of different caching strategies in ASP.NET.
+        Practical xUnit and Moq patterns for cleaner, maintainable .NET unit tests.
       </p>
     </li>
     <li>
@@ -69,11 +42,11 @@
         <a
           href="https://gramli.github.io/posts/code/aspnet/secure-asp-net-headers"
           class="link-primary"
-          >Secure ASP.NET Server Headers</a
+          >Secure ASP.NET Core Server Headers</a
         >
       </h6>
       <p class="text-muted">
-        Configuring security headers in ASP.NET applications.
+        Remove server fingerprinting headers and add Content-Security-Policy, X-Content-Type-Options in ASP.NET Core.
       </p>
     </li>
     <li>
@@ -81,11 +54,11 @@
         <a
           href="https://gramli.github.io/posts/code/aspnet/minimap-api-pros-and-cons"
           class="link-primary"
-          >Minimal API Pros & Cons</a
+          >ASP.NET Core Minimal API: Pros and Cons</a
         >
       </h6>
       <p class="text-muted">
-        Pros and cons of ASP.NET Core Minimal APIs.
+        Where Minimal APIs shine over controllers, and where the trade-offs start to hurt.
       </p>
     </li>
     <li>
@@ -93,26 +66,55 @@
         <a
           href="https://gramli.github.io/posts/code/aspnet/configure-class-programically"
           class="link-primary"
-          >Configure Options Programmatically</a
+          >Configure ASP.NET Core Options Programmatically</a
         >
       </h6>
-      <p class="text-muted">Configuring options programmatically in ASP.NET Core.</p>
+      <p class="text-muted">Using delegates and IConfigureOptions for flexible, testable ASP.NET Core configuration.</p>
     </li>
-    <!--<li>
-                <h6><a href="https://gramli.github.io/posts/code/aspnet/problem-details" class="link-primary">Problem details</a></h6>
-                <p class="text-muted">Problem details object in ASP.NET.</p>
-              </li>-->
     <li>
-      <h6>
-        <a
-          href="https://gramli.github.io/posts/code/aspnet/response-vs-output-caching"
-          class="link-primary"
-          >Response vs Output Caching</a
-        >
-      </h6>
-      <p class="text-muted">
-        Comparison: Response Caching vs. Output Caching.
-      </p>
+      <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-accent-alt); text-transform: uppercase; letter-spacing: 1px;">// CACHING SERIES</span>
+      <ul style="margin-top: 0.5rem;">
+        <li>
+          <h6>
+            <a
+              href="https://gramli.github.io/posts/code/aspnet/aspnet-web-api-caching-strategies"
+              class="link-primary"
+              >ASP.NET Core Caching Strategies Overview</a
+            >
+          </h6>
+          <p class="text-muted">In-Memory, Distributed, Output, Response, and Query caching — when to use each.</p>
+        </li>
+        <li>
+          <h6>
+            <a
+              href="https://gramli.github.io/posts/code/aspnet/response-vs-output-caching"
+              class="link-primary"
+              >Response Caching vs Output Caching</a
+            >
+          </h6>
+          <p class="text-muted">Side-by-side comparison of where the cache lives and when to use each approach.</p>
+        </li>
+        <li>
+          <h6>
+            <a
+              href="https://gramli.github.io/posts/code/aspnet/response-caching-minimal-api"
+              class="link-primary"
+              >Response Caching in Minimal APIs</a
+            >
+          </h6>
+          <p class="text-muted">Client-side caching headers in ASP.NET Core Minimal APIs using endpoint filters.</p>
+        </li>
+        <li>
+          <h6>
+            <a
+              href="https://gramli.github.io/posts/code/aspnet/output-caching-with-authorization"
+              class="link-primary"
+              >Output Caching with Authorization</a
+            >
+          </h6>
+          <p class="text-muted">Custom Output Caching Policy for authorization header in ASP.NET Core Minimal API.</p>
+        </li>
+      </ul>
     </li>
   </ul>
 </div>

@@ -1,6 +1,12 @@
-*Posted 12/21/2024*
+---
+layout: post
+title: "Configure ASP.NET Core Options Programmatically"
+date: 2024-12-21
+categories: [dotnet, aspnet, configuration]
+description: "How to configure ASP.NET Core options classes programmatically using delegates and IConfigureOptions for flexible, testable configuration."
+---
 
-## Configure options programically
+*Posted 12/21/2024*
 
 ## Configure options with a delegate
 

@@ -123,8 +123,9 @@ title: Home
             </div>
             <div class="bio-short">
               <p>
-                System log for daily programming operations. Straightforward
-                technical directives. Best practices. Troubleshooting logs.
+                ASP.NET Core and Angular engineer. Building practical
+                applications with local LLMs — real benchmarks, real
+                code, real architecture decisions.
               </p>
               <p
                 style="
@@ -157,13 +158,19 @@ title: Home
             <p>
               Senior Software Engineer specializing in C# and .NET Core. My
               evolution began with Windows desktop applications and has expanded
-              into modern Angular/React web ecosystems.
+              into modern Angular web ecosystems and AI-powered backends.
             </p>
             <p style="margin-top: 1rem">
               I view software engineering as a craft. I am a code quality
               perfectionist, dedicated to clean architecture, maintainable
               codebases, and pragmatic solutions. This system archives my
               technical findings and benchmarks.
+            </p>
+            <p style="margin-top: 1rem">
+              Currently exploring practical local AI engineering: running Gemma
+              models on constrained hardware, building LLM-orchestrated
+              backends, and evaluating AI agent tooling for real development
+              workflows.
             </p>
 
             <!-- Contact moved here for Desktop view per requirements to be 'Overview' -->
@@ -184,6 +191,50 @@ title: Home
                 <img src="assets/linkedin.svg" class="social" alt="LinkedIn" />
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <hr style="border-color: var(--color-navy-light); margin: 3rem 0" />
+
+      <!-- Featured Projects -->
+      <section id="featured-projects" class="dashboard-section">
+        <h2>// FEATURED_PROJECTS</h2>
+        <div class="dashboard-grid">
+          <div class="tech-card widget-style">
+            <h4 style="margin-bottom: 0.5rem;">Family Trip Advisor</h4>
+            <p class="text-muted" style="font-size: 0.88rem; margin-bottom: 1rem;">Angular + ASP.NET Core backend orchestrating Gemma 4 E2B for practical travel planning. Demonstrates how backend prompt orchestration unlocks reliable results from small local LLMs.</p>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; padding: 0.15rem 0.5rem; border: 1px solid var(--color-border); color: var(--color-cyan-dim);">Gemma 4 E2B</span>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; padding: 0.15rem 0.5rem; border: 1px solid var(--color-border); color: var(--color-cyan-dim);">ASP.NET Core</span>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; padding: 0.15rem 0.5rem; border: 1px solid var(--color-border); color: var(--color-cyan-dim);">Angular</span>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; padding: 0.15rem 0.5rem; border: 1px solid var(--color-border); color: var(--color-cyan-dim);">Ollama</span>
+            </div>
+            <a href="https://gramli.github.io/posts/ai/gemma4-e2b-app" style="font-family: var(--font-mono); font-size: 0.8rem;">[READ_ARTICLE]</a>
+          </div>
+          <div class="tech-card widget-style">
+            <h4 style="margin-bottom: 0.5rem;">WeatherApi: Architecture Comparison</h4>
+            <p class="text-muted" style="font-size: 0.88rem; margin-bottom: 1rem;">Two identical .NET Minimal APIs — one in Clean Architecture, one in Vertical Slice Architecture — built to compare implementation speed, testability, and maintainability side by side.</p>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; padding: 0.15rem 0.5rem; border: 1px solid var(--color-border); color: var(--color-cyan-dim);">ASP.NET Core</span>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; padding: 0.15rem 0.5rem; border: 1px solid var(--color-border); color: var(--color-cyan-dim);">Minimal API</span>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; padding: 0.15rem 0.5rem; border: 1px solid var(--color-border); color: var(--color-cyan-dim);">Clean Architecture</span>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; padding: 0.15rem 0.5rem; border: 1px solid var(--color-border); color: var(--color-cyan-dim);">VSA</span>
+            </div>
+            <a href="https://github.com/Gramli/WeatherApi" target="_blank" style="font-family: var(--font-mono); font-size: 0.8rem;">[GITHUB: CA]</a>
+            <a href="https://github.com/Gramli/WeatherApi-VSA" target="_blank" style="font-family: var(--font-mono); font-size: 0.8rem; margin-left: 1rem;">[GITHUB: VSA]</a>
+            <a href="https://gramli.github.io/posts/architecture/clean-arch-vs-vertical-slice-arch" style="font-family: var(--font-mono); font-size: 0.8rem; margin-left: 1rem;">[READ_ARTICLE]</a>
+          </div>
+          <div class="tech-card widget-style">
+            <h4 style="margin-bottom: 0.5rem;">OpenClaw in Windows Sandbox</h4>
+            <p class="text-muted" style="font-size: 0.88rem; margin-bottom: 1rem;">A two-part guide for running OpenClaw AI agents securely on a local Windows machine using Windows Sandbox — no cloud, no containers, no cost.</p>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; padding: 0.15rem 0.5rem; border: 1px solid var(--color-border); color: var(--color-cyan-dim);">AI Agents</span>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; padding: 0.15rem 0.5rem; border: 1px solid var(--color-border); color: var(--color-cyan-dim);">Windows Sandbox</span>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; padding: 0.15rem 0.5rem; border: 1px solid var(--color-border); color: var(--color-cyan-dim);">Security</span>
+            </div>
+            <a href="https://gramli.github.io/posts/ai/open-claw-sandbox" style="font-family: var(--font-mono); font-size: 0.8rem;">[PART_1]</a>
+            <a href="https://gramli.github.io/posts/ai/open-claw-provider-comparison" style="font-family: var(--font-mono); font-size: 0.8rem; margin-left: 1rem;">[PART_2]</a>
           </div>
         </div>
       </section>
@@ -213,17 +264,22 @@ title: Home
             <div class="tech-card widget-style">{% include asp-net.html %}</div>
             <div class="tech-card widget-style">{% include csharp.html %}</div>
             <!-- Placeholder for balance -->
-            <div
-              class="tech-card"
-              style="
-                opacity: 0.5;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-style: dashed;
-              "
-            >
-              <span class="text-muted">[EMPTY_SLOT]</span>
+            <div class="tech-card widget-style">
+              <h4>// TESTING</h4>
+              <ul>
+                <li>
+                  <h6><a href="https://gramli.github.io/posts/code/aspnet/unit-tests-tips-and-tricks" class="link-primary">Clean Unit Testing in .NET: xUnit & Moq Tips</a></h6>
+                  <p class="text-muted">Practical xUnit and Moq patterns for cleaner, more maintainable .NET unit tests.</p>
+                </li>
+                <li>
+                  <h6><a href="https://gramli.github.io/posts/code/angular/jasmine-tests/redefine-property-for-tests" class="link-primary">Angular: Redefine Property for Jasmine Tests</a></h6>
+                  <p class="text-muted">How to redefine read-only properties on Angular services for unit testing with Jasmine.</p>
+                </li>
+                <li>
+                  <h6><a href="https://gramli.github.io/posts/code/angular/jasmine-tests/run-selected-test" class="link-primary">Angular: Run a Single Jasmine Test</a></h6>
+                  <p class="text-muted">How to run a single focused test in Angular without running the entire test suite.</p>
+                </li>
+              </ul>
             </div>
           </div>
         </section>
@@ -284,7 +340,7 @@ title: Home
     </main>
 
     <footer>
-      &copy; 2024 Daniel Balcarek. Powered by GitHub Pages. <br />
+      &copy; 2026 Daniel Balcarek. Powered by GitHub Pages. <br />
       <span style="color: var(--color-cyan-dim)">TERMINAL_SESSION_END</span>
     </footer>
 

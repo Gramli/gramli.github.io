@@ -1,9 +1,12 @@
 ---
 layout: post
+title: "How to Use Gemma 4 E2B the Smart Way: Family Trip Advisor"
 date: 2026-05-22
 categories: [ai, gemma, ollama, aspnet, angular, local-ai]
 description: "Building a Family Trip Advisor app with Gemma 4 E2B, ASP.NET backend, and Angular frontend — how smart prompt design and backend orchestration unlock reliable results from small LLMs."
-canonical_url: "https://dev.to/gramli/old-pc-vs-new-ai-can-a-2015-desktop-actually-run-gemma-4-2b-vs-4b-benchmark-2eg6"
+canonical_url: "https://dev.to/gramli/how-to-use-gemma-4-e2b-the-smart-way-family-trip-advisor-1870"
+series: gemma4
+series_part: 2
 ---
 
 # How to Use Gemma 4 E2B the Smart Way: Family Trip Advisor

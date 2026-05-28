@@ -1,5 +1,12 @@
+---
+layout: post
+title: "ASP.NET Core Minimal API: Pros and Cons"
+date: 2024-11-15
+categories: [dotnet, aspnet, minimal-api]
+description: "Balanced look at ASP.NET Core Minimal APIs: where they shine over controllers, and where the trade-offs start to hurt."
+---
+
 *Posted 11/15/2024*
-# ASP.NET Minimal API
 
 ## Pros
 - **Minimal Hosting Model**

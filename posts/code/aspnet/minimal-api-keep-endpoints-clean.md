@@ -3,6 +3,7 @@ layout: post
 title: "C# Minimal API: A Practical Way to Keep Endpoints Clean"
 date: 2026-12-22
 categories: [dotnet, minimapapis, architecture, webapi]
+description: "How to keep Minimal API endpoints clean and maintainable by using extension methods and RouteGroupBuilder instead of scattering endpoint logic."
 canonical_url: "https://dev.to/gramli/c-minimal-api-a-practical-way-to-keep-endpoints-clean-18aa"
 ---
 

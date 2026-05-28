@@ -1,3 +1,11 @@
+---
+layout: post
+title: "The Reality of VibeCoding: Task Manager & Sticky Notes Dashboard"
+date: 2025-12-03
+categories: [ai, angular, vibecoding, frontend]
+description: "An honest breakdown of why vibecoding is fast but unreliable — and why AI still can't replace real engineering judgment."
+---
+
 *Posted 12/03/2025*
 
 # The Reality of VibeCoding - Task Manager & Sticky Notes Dashboard

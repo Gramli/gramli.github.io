@@ -3,6 +3,7 @@ layout: post
 title: "Clean Architecture in .NET: Real-World Pros, Cons, and Trade-offs"
 date: 2026-02-24
 categories: [dotnet, architecture, dotnet, csharp, clean-architecture]
+description: "Honest assessment of Clean Architecture trade-offs based on real project experience: when it shines and when it costs more than it gives."
 canonical_url: "https://dev.to/gramli/clean-architecture-in-net-real-world-pros-cons-and-trade-offs-3m9i"
 ---
 

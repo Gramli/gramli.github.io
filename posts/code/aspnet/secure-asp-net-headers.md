@@ -1,5 +1,12 @@
+---
+layout: post
+title: "Secure ASP.NET Core Server Headers"
+date: 2024-11-15
+categories: [dotnet, aspnet, security]
+description: "How to configure security headers in ASP.NET Core: remove server fingerprinting headers and add Content-Security-Policy, X-Content-Type-Options, and more."
+---
+
 *Posted 11/15/2024*
-# Secure ASP.NET Server Headers
 
 ### Remove server headers from response
 Its always better to show headers which hold information about server, framework or language to hide the information from attacker.

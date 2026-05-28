@@ -47,10 +47,10 @@
             <li class="nav-item has-dropdown">
                 <a href="{{ "/" | relative_url }}#blog-sectors" class="nav-link">Blog <span style="font-size:0.7em">▼</span></a>
                 <div class="dropdown-menu">
+                    <a href="{{ "/" | relative_url }}#sector-arch">Architecture &amp; Intelligence</a>
                     <a href="{{ "/" | relative_url }}#sector-core">Backend Engineering</a>
-                    <a href="{{ "/" | relative_url }}#sector-arch">Architecture & DevOps</a>
                     <a href="{{ "/" | relative_url }}#sector-web">Frontend Development</a>
-                    <a href="{{ "/" | relative_url }}#sector-data">Data & Intelligence</a>
+                    <a href="{{ "/" | relative_url }}#sector-data">Data &amp; DevOps</a>
                 </div>
             </li>
             <li class="mobile-only"><a href="{{ "/" | relative_url }}#comms" class="nav-link">Contact</a></li>
@@ -63,7 +63,13 @@
       <article class="tech-card dashboard-section">
         {% if page.title %}
         <header style="border-bottom: 1px solid var(--color-border); margin-bottom: 2rem; padding-bottom: 1rem;">
+          <div style="margin-bottom: 0.75rem;">
+            <a href="{{ '/' | relative_url }}" style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-cyan-dim); text-decoration: none;">← HOME</a>
+          </div>
           <h1>{{ page.title }}</h1>
+          {% if page.date %}
+          <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 0.5rem;">{{ page.date | date: "%B %d, %Y" }}</p>
+          {% endif %}
           {% if page.description %}
           <p style="font-family:var(--font-mono); color:var(--color-cyan-dim);">{{ page.description }}</p>
           {% endif %}
@@ -79,10 +85,48 @@
           STATUS: OPEN_SOURCE // {% github_edit_link "EDIT_RECORD" %}
         </div>
         {% endif %}
+
+        {% if page.series %}
+        {% assign series_posts = site.documents | where: "series", page.series | sort: "series_part" %}
+        {% if series_posts.size > 1 %}
+        <div style="margin-top: 2.5rem; padding: 1.25rem; border: 1px solid var(--color-border); background: rgba(2,16,37,0.5);">
+          <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-accent-alt); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.75rem;">// SERIES: {{ page.series | upcase }}</p>
+          <ol style="margin: 0; padding-left: 1.25rem;">
+            {% for sp in series_posts %}
+            <li style="margin-bottom: 0.4rem; font-size: 0.9rem;">
+              {% if sp.url == page.url %}
+              <span style="color: var(--color-cyan-bright);">{{ sp.title }} <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-accent-alt);">[YOU ARE HERE]</span></span>
+              {% else %}
+              <a href="{{ sp.url | relative_url }}">{{ sp.title }}</a>
+              {% endif %}
+            </li>
+            {% endfor %}
+          </ol>
+        </div>
+        {% endif %}
+        {% endif %}
+
+        {% assign page_cat = page.categories | first %}
+        {% if page_cat %}
+        {% assign related_posts = site.documents | where_exp: "p", "p.url != page.url" | where_exp: "p", "p.categories contains page_cat" | sort: "date" | reverse | limit: 3 %}
+        {% if related_posts.size > 0 %}
+        <div style="margin-top: 2.5rem; border-top: 1px solid var(--color-border); padding-top: 1.5rem;">
+          <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-accent-alt); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;">// RELATED_ARTICLES</p>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            {% for rp in related_posts %}
+            <li style="margin-bottom: 0.75rem; padding-bottom: 0.75rem; border-bottom: 1px dashed var(--color-border);">
+              <a href="{{ rp.url | relative_url }}" style="font-size: 0.95rem;">{{ rp.title }}</a>
+              {% if rp.description %}<p style="margin: 0.2rem 0 0; font-size: 0.82rem; color: var(--color-text-muted);">{{ rp.description }}</p>{% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+        {% endif %}
       </article>
 
       <footer>
-        &copy; 2024 Daniel Balcarek. Powered by GitHub Pages. <br>
+        &copy; 2026 Daniel Balcarek. Powered by GitHub Pages. <br>
         <span style="color:var(--color-cyan-dim)">TERMINAL_SESSION_END</span>
       </footer>
 

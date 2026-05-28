@@ -3,6 +3,7 @@ layout: post
 title: "C# Minimal API: Multiple Authentication Schemes with Swagger Support"
 date: 2026-12-31
 categories: [dotnet, minimapapis, webapi, swagger, csharp]
+description: "How to configure multiple authentication schemes (JWT, Basic Auth) in a Minimal API with working Swagger UI support for each scheme."
 canonical_url: "https://dev.to/gramli/c-minimal-api-multiple-authentication-schemes-with-swagger-support-bo1"
 ---
 

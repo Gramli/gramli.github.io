@@ -1,5 +1,12 @@
+---
+layout: post
+title: "ASP.NET Core Caching Strategies Overview"
+date: 2024-11-15
+categories: [dotnet, aspnet, caching, performance]
+description: "Overview of all caching strategies in ASP.NET Core: In-Memory, Distributed, Output, Response, and Query caching — when to use each."
+---
+
 *Posted 11/15/2024*
-# ASP.NET Core caching strategies
 
 <table>
   <thead>

@@ -1,6 +1,12 @@
-*Posted 10/03/2025*
+---
+layout: post
+title: "Response Caching vs Output Caching in ASP.NET Core"
+date: 2025-10-03
+categories: [dotnet, aspnet, caching, performance]
+description: "Side-by-side comparison of Response Caching and Output Caching in ASP.NET Core — where the cache lives, when to use each, and how to combine them."
+---
 
-# Response Caching vs. Output Caching in ASP.NET
+*Posted 10/03/2025*
 
 | Feature | Response Caching | Output Caching |
 |---------|------------------|----------------|

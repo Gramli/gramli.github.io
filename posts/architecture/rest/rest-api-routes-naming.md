@@ -1,6 +1,12 @@
-*Posted 12/05/2024*
+---
+layout: post
+title: "REST API Route Naming Best Practices"
+date: 2024-12-05
+categories: [dotnet, aspnet, rest, api-design]
+description: "Practical REST API route naming conventions: nouns over verbs, pluralization, versioning, and hierarchical resource paths."
+---
 
-# Rest API routers naming best practices
+*Posted 12/05/2024*
 
 ## Use Nouns, Not Verbs
 

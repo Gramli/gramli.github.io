@@ -1,6 +1,12 @@
-*Posted 12/05/2024*
+---
+layout: post
+title: "Problem Details for HTTP APIs: RFC 9457 Cheat Sheet"
+date: 2024-12-05
+categories: [dotnet, aspnet, rest, api-design]
+description: "RFC 9457 Problem Details standard explained with a practical cheat sheet for HTTP API error responses in ASP.NET Core."
+---
 
-# Problem Details for HTTP APIs
+*Posted 12/05/2024*
 [RFC 9457 - Problem Details for HTTP APIs](https://www.rfc-editor.org/rfc/rfc9457.html). The document defines a "problem detail" to carry machine-readable details of errors in HTTP response content to avoid the need to define new error response formats for HTTP APIs.
 
 ## Cheat Sheet

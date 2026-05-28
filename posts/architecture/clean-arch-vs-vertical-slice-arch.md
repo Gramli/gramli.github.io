@@ -1,7 +1,9 @@
 ---
 layout: post
+title: ".NET: Vertical Slice Architecture vs Clean Architecture — A Practical Comparison"
 date: 2026-01-13
 categories: [dotnet, architecture]
+description: "Practical comparison of Clean Architecture and Vertical Slice Architecture using two real .NET Minimal API implementations, not just theory."
 canonical_url: "https://dev.to/gramli/net-vertical-slice-architecture-vs-clean-architecture-a-practical-comparison-using-real-apis-4mck"
 ---
 

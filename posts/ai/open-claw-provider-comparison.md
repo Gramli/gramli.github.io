@@ -5,6 +5,8 @@ date: 2026-05-07
 categories: [ai, openclaw, windows, sandbox, security, providers]
 description: "Part 2: Complete OpenClaw setup in Windows Sandbox with automated .wsb configuration and comparison of free and paid AI providers."
 canonical_url: "https://dev.to/gramli/openclaw-in-windows-sandbox-full-setup-and-free-vs-paid-model-comparison-3jec"
+series: openclaw
+series_part: 2
 ---
 
 *Posted 07/05/2026*
