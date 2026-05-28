@@ -61,8 +61,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function search() {
     var input = document.getElementById("searchBar");
-    if (input && input.value.trim()) {
-        var query = encodeURIComponent(input.value.trim());
-        window.open("https://duckduckgo.com/?q=site%3Agramli.github.io+" + query, "_blank");
-    }
+    window.find(input.value);
 }
