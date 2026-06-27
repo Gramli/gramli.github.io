@@ -73,6 +73,9 @@ title: Home
               <a href="#sector-data">Data & DevOps</a>
             </div>
           </li>
+          <li>
+            <a href="#experiments" class="nav-link">Experiments &amp; Games</a>
+          </li>
           <li class="mobile-only">
             <a href="#comms" class="nav-link">Contact</a>
           </li>
@@ -241,12 +244,33 @@ title: Home
 
       <hr style="border-color: var(--color-navy-light); margin: 3rem 0" />
 
+      <!-- Playful challenge builds and smaller creative work -->
+      <section id="experiments" class="dashboard-section">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">SIDE QUESTS // CREATIVE BUILDS</span>
+            <h2>// EXPERIMENTS &amp; GAMES</h2>
+          </div>
+          <p>
+            Games, coding challenges, and compact experiments built to explore
+            an idea, learn something new, or simply have fun with code.
+          </p>
+        </div>
+        <div class="dashboard-grid article-row-grid">
+          <div class="tech-card widget-style">
+            {% include experiments.html %}
+          </div>
+        </div>
+      </section>
+
+      <hr style="border-color: var(--color-navy-light); margin: 3rem 0" />
+
       <!-- Blog Wrapper -->
       <div id="blog-sectors">
         <!-- Sector 1: Arch & AI -->
         <section id="sector-arch" class="dashboard-section">
           <h2>// 01. ARCHITECTURE & INTELLIGENCE</h2>
-          <div class="dashboard-grid">
+          <div class="dashboard-grid article-row-grid">
             <div class="tech-card widget-style">
               {% include architecture.html %}
             </div>
@@ -260,26 +284,28 @@ title: Home
         <!-- Sector 2: Core Technologies -->
         <section id="sector-core" class="dashboard-section">
           <h2>// 02. BACKEND ENGINEERING</h2>
-          <div class="dashboard-grid">
+          <div class="dashboard-grid article-row-grid">
             <div class="tech-card widget-style">{% include asp-net.html %}</div>
             <div class="tech-card widget-style">{% include csharp.html %}</div>
-            <!-- Placeholder for balance -->
+            <!-- Cross-stack testing topic -->
             <div class="tech-card widget-style">
-              <h4>// TESTING</h4>
-              <ul>
-                <li>
-                  <h6><a href="https://gramli.github.io/posts/code/aspnet/unit-tests-tips-and-tricks" class="link-primary">Clean Unit Testing in .NET: xUnit & Moq Tips</a></h6>
-                  <p class="text-muted">Practical xUnit and Moq patterns for cleaner, more maintainable .NET unit tests.</p>
-                </li>
-                <li>
-                  <h6><a href="https://gramli.github.io/posts/code/angular/jasmine-tests/redefine-property-for-tests" class="link-primary">Angular: Redefine Property for Jasmine Tests</a></h6>
-                  <p class="text-muted">How to redefine read-only properties on Angular services for unit testing with Jasmine.</p>
-                </li>
-                <li>
-                  <h6><a href="https://gramli.github.io/posts/code/angular/jasmine-tests/run-selected-test" class="link-primary">Angular: Run a Single Jasmine Test</a></h6>
-                  <p class="text-muted">How to run a single focused test in Angular without running the entire test suite.</p>
-                </li>
-              </ul>
+              <div>
+                <h4>// TESTING</h4>
+                <ul>
+                  <li>
+                    <h6><a href="https://gramli.github.io/posts/code/aspnet/unit-tests-tips-and-tricks" class="link-primary">Clean Unit Testing in .NET: xUnit & Moq Tips</a></h6>
+                    <p class="text-muted">Practical xUnit and Moq patterns for cleaner, more maintainable .NET unit tests.</p>
+                  </li>
+                  <li>
+                    <h6><a href="https://gramli.github.io/posts/code/angular/jasmine-tests/redefine-property-for-tests" class="link-primary">Angular: Redefine Property for Jasmine Tests</a></h6>
+                    <p class="text-muted">How to redefine read-only properties on Angular services for unit testing with Jasmine.</p>
+                  </li>
+                  <li>
+                    <h6><a href="https://gramli.github.io/posts/code/angular/jasmine-tests/run-selected-test" class="link-primary">Angular: Run a Single Jasmine Test</a></h6>
+                    <p class="text-muted">How to run a single focused test in Angular without running the entire test suite.</p>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
@@ -287,7 +313,7 @@ title: Home
         <!-- Sector 3: Frontend Grid -->
         <section id="sector-web" class="dashboard-section">
           <h2>// 03. FRONTEND DEVELOPMENT</h2>
-          <div class="dashboard-grid">
+          <div class="dashboard-grid article-row-grid">
             <div class="tech-card widget-style">{% include angular.html %}</div>
             <div class="tech-card widget-style">
               {% include javascript.html %}
@@ -301,7 +327,7 @@ title: Home
         <!-- Sector 4: Data & DevOps -->
         <section id="sector-data" class="dashboard-section">
           <h2>// 04. DATA & DEVOPS</h2>
-          <div class="dashboard-grid">
+          <div class="dashboard-grid article-row-grid">
             <div class="tech-card widget-style">{% include sql.html %}</div>
             <div class="tech-card widget-style">{% include git.html %}</div>
             <div class="tech-card widget-style">
