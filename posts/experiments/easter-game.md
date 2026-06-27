@@ -41,13 +41,9 @@ There are also a few additional mechanics:
 
 The original version contained seven levels, and even back then the code was designed to make adding new levels relatively easy.
 
-
-<!-- Provide an overview of your project, where it started, and what it means to you. -->
-
 ## Demo
-<!-- Share a link to your project and include a video walkthrough or screenshots showing your application in action. -->
 
-{% embed https://eastergame-768859394911.europe-west1.run.app/ %}
+https://eastergame-768859394911.europe-west1.run.app/
 
 ## Try Both Versions
 
