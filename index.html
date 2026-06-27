@@ -202,7 +202,16 @@ title: Home
 
       <!-- Featured Projects -->
       <section id="featured-projects" class="dashboard-section">
-        <h2>// FEATURED_PROJECTS</h2>
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">PORTFOLIO // SELECTED BUILDS</span>
+            <h2>// FEATURED_PROJECTS</h2>
+          </div>
+          <p>
+            Selected applications and technical explorations that demonstrate
+            practical architecture, AI integration, and engineering trade-offs.
+          </p>
+        </div>
         <div class="dashboard-grid">
           <div class="tech-card widget-style">
             <h4 style="margin-bottom: 0.5rem;">Family Trip Advisor</h4>
@@ -244,32 +253,20 @@ title: Home
 
       <hr style="border-color: var(--color-navy-light); margin: 3rem 0" />
 
-      <!-- Playful challenge builds and smaller creative work -->
-      <section id="experiments" class="dashboard-section">
-        <div class="section-heading">
-          <div>
-            <span class="section-kicker">SIDE QUESTS // CREATIVE BUILDS</span>
-            <h2>// EXPERIMENTS &amp; GAMES</h2>
-          </div>
-          <p>
-            Games, coding challenges, and compact experiments built to explore
-            an idea, learn something new, or simply have fun with code.
-          </p>
-        </div>
-        <div class="dashboard-grid article-row-grid">
-          <div class="tech-card widget-style">
-            {% include experiments.html %}
-          </div>
-        </div>
-      </section>
-
-      <hr style="border-color: var(--color-navy-light); margin: 3rem 0" />
-
       <!-- Blog Wrapper -->
       <div id="blog-sectors">
         <!-- Sector 1: Arch & AI -->
         <section id="sector-arch" class="dashboard-section">
-          <h2>// 01. ARCHITECTURE & INTELLIGENCE</h2>
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">SYSTEM DESIGN // AI // PERFORMANCE</span>
+              <h2>// 01. ARCHITECTURE & INTELLIGENCE</h2>
+            </div>
+            <p>
+              Architecture decisions, practical AI engineering, and
+              benchmark-driven investigations grounded in real implementations.
+            </p>
+          </div>
           <div class="dashboard-grid article-row-grid">
             <div class="tech-card widget-style">
               {% include architecture.html %}
@@ -283,7 +280,16 @@ title: Home
 
         <!-- Sector 2: Core Technologies -->
         <section id="sector-core" class="dashboard-section">
-          <h2>// 02. BACKEND ENGINEERING</h2>
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">.NET // C# // TESTING</span>
+              <h2>// 02. BACKEND ENGINEERING</h2>
+            </div>
+            <p>
+              Implementation guides, patterns, and testing practices for
+              maintainable ASP.NET Core and C# applications.
+            </p>
+          </div>
           <div class="dashboard-grid article-row-grid">
             <div class="tech-card widget-style">{% include asp-net.html %}</div>
             <div class="tech-card widget-style">{% include csharp.html %}</div>
@@ -312,7 +318,16 @@ title: Home
 
         <!-- Sector 3: Frontend Grid -->
         <section id="sector-web" class="dashboard-section">
-          <h2>// 03. FRONTEND DEVELOPMENT</h2>
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">ANGULAR // TYPESCRIPT // BROWSER</span>
+              <h2>// 03. FRONTEND DEVELOPMENT</h2>
+            </div>
+            <p>
+              Focused solutions for Angular applications, TypeScript design,
+              browser APIs, localization, caching, and frontend testing.
+            </p>
+          </div>
           <div class="dashboard-grid article-row-grid">
             <div class="tech-card widget-style">{% include angular.html %}</div>
             <div class="tech-card widget-style">
@@ -326,12 +341,40 @@ title: Home
 
         <!-- Sector 4: Data & DevOps -->
         <section id="sector-data" class="dashboard-section">
-          <h2>// 04. DATA & DEVOPS</h2>
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">DATABASES // SOURCE CONTROL // OPERATIONS</span>
+              <h2>// 04. DATA & DEVOPS</h2>
+            </div>
+            <p>
+              Practical notes for databases, Git workflows, deployment
+              configuration, package management, and everyday operations.
+            </p>
+          </div>
           <div class="dashboard-grid article-row-grid">
             <div class="tech-card widget-style">{% include sql.html %}</div>
             <div class="tech-card widget-style">{% include git.html %}</div>
             <div class="tech-card widget-style">
               {% include configuration.html %}
+            </div>
+          </div>
+        </section>
+
+        <!-- Sector 5: Experiments & Games -->
+        <section id="experiments" class="dashboard-section">
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">SIDE QUESTS // CREATIVE BUILDS</span>
+              <h2>// 05. EXPERIMENTS &amp; GAMES</h2>
+            </div>
+            <p>
+              Games, coding challenges, and compact experiments built to explore
+              an idea, learn something new, or simply have fun with code.
+            </p>
+          </div>
+          <div class="dashboard-grid article-row-grid">
+            <div class="tech-card widget-style">
+              {% include experiments.html %}
             </div>
           </div>
         </section>

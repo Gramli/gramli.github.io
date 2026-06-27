@@ -1,68 +1,72 @@
 <div class="col-sm-auto col-md-auto col-lg-4">
   <h4>Benchmarks</h4>
-  
-  <h5>.NET</h5>
-  <ul>
+  <ul class="benchmark-groups">
     <li>
-        <h6>
-        <a
-            href="https://gramli.github.io/posts/benchmarks/exceptions-vs-result"
-            class="link-primary"
-            >Exception vs Result pattern</a
-        >
-        </h6>
-        <p class="text-muted">
-        Benchmark about two error handling approaches.
-        </p>
+      <h5>.NET</h5>
+      <ul>
+        <li>
+          <h6>
+            <a
+              href="https://gramli.github.io/posts/benchmarks/exceptions-vs-result"
+              class="link-primary"
+              >Exception vs Result pattern</a
+            >
+          </h6>
+          <p class="text-muted">
+            Benchmark about two error handling approaches.
+          </p>
+        </li>
+        <li>
+          <h6>
+            <a
+              href="https://gramli.github.io/posts/benchmarks/copyto-vs-write"
+              class="link-primary"
+              >CopyTo vs Write</a
+            >
+          </h6>
+          <p class="text-muted">
+            Benchmark about using inner MemoryStream for copy byte array to
+            output MemoryStream.
+          </p>
+        </li>
+      </ul>
     </li>
     <li>
-        <h6>
-        <a
-            href="https://gramli.github.io/posts/benchmarks/copyto-vs-write"
-            class="link-primary"
-            >CopyTo vs Write</a
-        >
-        </h6>
-        <p class="text-muted">
-        Benchmark about using inner MemoryStream for copy byte array to
-        output MemoryStream.
-        </p>
-    </li>
-  </ul>
-
-  <h5>REFLECTION</h5>
-  <ul>
-    <li>
-        <h6>
-        <a
-            href="https://gramli.github.io/posts/benchmarks/reflection/get-enum-value-attribute"
-            class="link-primary"
-            >Get Enum Value Attribute</a
-        >
-        </h6>
-        <p class="text-muted">
-        Performance comparison of reflection, cached reflection, and FrozenDictionary for retrieving custom attributes from enum values in .NET 10.
-        </p>
-    </li>
-    <li>
-        <h6>
-        <a
-            href="https://gramli.github.io/posts/benchmarks/reflection/export-data"
-            class="link-primary"
-            >Export data</a
-        >
-        </h6>
-        <p class="text-muted">Benchmarking reflection-based, cached reflection, and dictionary-based approaches for CSV data export in .NET 10.</p>
-    </li>
-    <li>
-        <h6>
-        <a
-            href="https://gramli.github.io/posts/benchmarks/reflection/create-instance"
-            class="link-primary"
-            >Create Instance</a
-        >
-        </h6>
-        <p class="text-muted">Performance comparison of ServiceProvider, Activator.CreateInstance with concrete type, and Activator.CreateInstance via interface for creating class instances in .NET.</p>
+      <h5>REFLECTION</h5>
+      <ul>
+        <li>
+          <h6>
+            <a
+              href="https://gramli.github.io/posts/benchmarks/reflection/get-enum-value-attribute"
+              class="link-primary"
+              >Get Enum Value Attribute</a
+            >
+          </h6>
+          <p class="text-muted">
+            Performance comparison of reflection, cached reflection, and FrozenDictionary for retrieving custom attributes from enum values in .NET 10.
+          </p>
+        </li>
+        <li>
+          <h6>
+            <a
+              href="https://gramli.github.io/posts/benchmarks/reflection/export-data"
+              class="link-primary"
+              >Export data</a
+            >
+          </h6>
+          <p class="text-muted">Benchmarking reflection-based, cached reflection, and dictionary-based approaches for CSV data export in .NET 10.</p>
+        </li>
+        <li>
+          <h6>
+            <a
+              href="https://gramli.github.io/posts/benchmarks/reflection/create-instance"
+              class="link-primary"
+              >Create Instance</a
+            >
+          </h6>
+          <p class="text-muted">Performance comparison of ServiceProvider, Activator.CreateInstance with concrete type, and Activator.CreateInstance via interface for creating class instances in .NET.</p>
+        </li>
+      </ul>
     </li>
   </ul>
 </div>
