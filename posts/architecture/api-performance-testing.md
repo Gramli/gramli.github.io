@@ -4,6 +4,7 @@ title: "API Performance Testing: Designing Realistic Tests"
 date: 2026-10-05
 categories: [architecture, api, performance, testing]
 description: "Design realistic API performance tests with representative user journeys, expected load, external dependencies, production-like environments, and meaningful metrics."
+canonical_url: "https://dev.to/gramli/api-performance-testing-how-to-design-realistic-tests-59gn"
 ---
 
 # API Performance Testing: Designing Realistic Tests
@@ -20,14 +21,16 @@ The goal is not just to generate a large number of requests, but to create perfo
 
 ## Table of Contents
 
-- [Basic Definition](#basic-definition)
-  - [Types of Tests](#types-of-tests)
-- [How to Properly Design Performance Tests](#how-to-properly-design-performance-tests)
-  - [Defining the Expected Load](#defining-the-expected-load)
-- [Performance Testing and External Services](#performance-testing-and-external-services)
-- [Environment Configuration](#environment-configuration)
-- [Metrics and Results](#metrics-and-results)
-- [Summary](#summary)
+- [API Performance Testing: Designing Realistic Tests](#api-performance-testing-designing-realistic-tests)
+  - [Table of Contents](#table-of-contents)
+  - [Basic Definition](#basic-definition)
+    - [Types of Tests](#types-of-tests)
+  - [How to Properly Design Performance Tests](#how-to-properly-design-performance-tests)
+    - [Defining the Expected Load](#defining-the-expected-load)
+  - [Performance Testing and External Services](#performance-testing-and-external-services)
+  - [Environment Configuration](#environment-configuration)
+  - [Metrics and Results](#metrics-and-results)
+  - [Summary](#summary)
 
 So, let's start with the basic definition and different types of performance tests.
 
